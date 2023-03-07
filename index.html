@@ -1,462 +1,472 @@
-<h3 class="u-textGreen">Find your size</h3>
-<p>Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
-    accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.</p>
-<div class="u-boxSilver u-pad3"><span>Size calculator: Choose the measurements in inches</span>
-    <div class="grid">
-        <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
-                class="Input u-fullWidth u-spaceEnds" id="control1">
-                <option value="0">Band</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-                <option value="32">32</option>
-                <option value="33">33</option>
-                <option value="34">34</option>
-                <option value="35">35</option>
-                <option value="36">36</option>
-                <option value="37">37</option>
-                <option value="38">38</option>
-                <option value="39">39</option>
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-                <option value="46">46</option>
-            </select></div>
-        <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
-                class="Input u-fullWidth u-spaceEnds" disabled="disabled" id="control2">
-                <option value="0">Bust</option>
-            </select></div>
-        <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta">
-            <div class="tituloRespuesta">YOUR SIZE</div>
-            <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
-                    id="detalleRespuesta"> </b><br /> <span class="section-header__title u-space0"
-                    id="detalleRespuesta-complex"> </span></header>
-        </div>
-        <div class="respuestaNegada grid__item u-textCenter u-pad1" id="NoRespuesta">
-            <div class="tituloRespuesta">NO RESULT FOR THIS COMBINATION</div>
+<!-- llamado temporal de estilos -->
+<link rel="stylesheet" href="./style-temp.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/theme.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/leonisa.css">
+<!--Fin llamado temporal de estilos -->
+
+<div class="temporalContiene700">
+    <!-- COPIAR CONTENIDO DESDE AQUI -->
+    <h3 class="u-textGreen">Find your size</h3>
+    <p>Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
+        accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.</p>
+    <div class="u-boxSilver u-pad3"><span>Size calculator: Choose the measurements in inches</span>
+        <div class="grid">
+            <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
+                    class="Input u-fullWidth u-spaceEnds" id="control1">
+                    <option value="0">Band</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                </select></div>
+            <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
+                    class="Input u-fullWidth u-spaceEnds" disabled="disabled" id="control2">
+                    <option value="0">Bust</option>
+                </select></div>
+            <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta">
+                <div class="tituloRespuesta">YOUR SIZE</div>
+                <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
+                        id="detalleRespuesta"> </b><br /> <span class="section-header__title u-space0"
+                        id="detalleRespuesta-complex"> </span></header>
+            </div>
+            <div class="respuestaNegada grid__item u-textCenter u-pad1" id="NoRespuesta">
+                <div class="tituloRespuesta">NO RESULT FOR THIS COMBINATION</div>
+            </div>
         </div>
     </div>
-</div>
-<script type="text/javascript">// <![CDATA[
-    $(document).ready(function () {
-        var control1 = $('#control1');
-        var control2 = $('#control2');
-        $('#SiRespuesta').hide();
-        $('#NoRespuesta').hide();
+    <script type="text/javascript">// <![CDATA[
+        $(document).ready(function () {
+            var control1 = $('#control1');
+            var control2 = $('#control2');
+            $('#SiRespuesta').hide();
+            $('#NoRespuesta').hide();
 
 
-        control1.change(function () {
-            var inicioBusto = 0;
-            var finBusto = 0;
-            var valores = "";
-            var control1Sel = control1.val();
-            switch (control1Sel) {
-                case "27":
-                    inicioBusto = 27;
-                    valores = ["28AA", "28A", "28B", "28C", "28D", "28DD(E)", "28F", "28G",];
-                    break;
-                case "28":
-                    inicioBusto = 28;
-                    valores = ["28AA", "28A", "28B", "28C", "28D", "28DD(E)", "28F", "28G",];
-                    break;
-                case "29":
-                    inicioBusto = 29;
-                    valores = ["30AA", "30A", "30B", "30C", "30D", "30DD(E)", "30F", "30G",];
-                    break;
-                case "30":
-                    inicioBusto = 30;
-                    valores = ["30AA", "30A", "30B", "30C", "30D", "30DD(E)", "30F", "30G",];
-                    break;
-                case "31":
-                    inicioBusto = 31;
-                    valores = ["32AA", "32A", "32B", "32C", "32D", "32DD(E)", "32F", "32G",];
-                    break;
-                case "32":
-                    inicioBusto = 32;
-                    valores = ["32AA", "32A", "32B", "32C", "32D", "32DD(E)", "32F", "32G",];
-                    break;
-                case "33":
-                    inicioBusto = 33;
-                    valores = ["34AA", "34A", "34B", "34C", "34D", "34DD(E)", "34F", "34G",];
-                    break;
-                case "34":
-                    inicioBusto = 34;
-                    valores = ["34AA", "34A", "34B", "34C", "34D", "34DD(E)", "34F", "34G",];
-                    break;
-                case "35":
-                    inicioBusto = 35;
-                    valores = ["36AA", "36A", "36B", "36C", "36D", "36DD(E)", "36F", "36G",];
-                    break;
-                case "36":
-                    inicioBusto = 36;
-                    valores = ["36AA", "36A", "36B", "36C", "36D", "36DD(E)", "36F", "36G",];
-                    break;
-                case "37":
-                    inicioBusto = 37;
-                    valores = ["38AA", "38A", "38B", "38C", "38D", "38DD(E)", "38F", "38G",];
-                    break;
-                case "38":
-                    inicioBusto = 38;
-                    valores = ["38AA", "38A", "38B", "38C", "38D", "38DD(E)", "38F", "38G",];
-                    break;
-                case "39":
-                    inicioBusto = 39;
-                    valores = ["40AA", "40A", "40B", "40C", "40D", "40DD(E)", "40F", "40G",];
-                    break;
-                case "40":
-                    inicioBusto = 40;
-                    valores = ["40AA", "40A", "40B", "40C", "40D", "40DD(E)", "40F", "40G",];
-                    break;
-                case "41":
-                    inicioBusto = 41;
-                    valores = ["42AA", "42A", "42B", "42C", "42D", "42DD(E)", "42F", "42G",];
-                    break;
-                case "42":
-                    inicioBusto = 42;
-                    valores = ["42AA", "42A", "42B", "42C", "42D", "42DD(E)", "42F", "42G",];
-                    break;
-                case "43":
-                    inicioBusto = 43;
-                    valores = ["44AA", "44A", "44B", "44C", "44D", "44DD(E)", "44F", "44G",];
-                    break;
-                case "44":
-                    inicioBusto = 44;
-                    valores = ["44AA", "44A", "44B", "44C", "44D", "44DD(E)", "44F", "44G",];
-                    break;
-                case "45":
-                    inicioBusto = 45;
-                    valores = ["46AA", "46A", "46B", "46C", "46D", "46DD(E)", "46F", "46G",];
-                    break;
-                case "46":
-                    inicioBusto = 46;
-                    valores = ["46AA", "46A", "46B", "46C", "46D", "46DD(E)", "46F", "46G",];
-                    break;
-                default:
-                    inicioBusto = 0;
-                    valores = "";
-            }
-            control2.html('');
-            control2.append('<option value="0">BUST (inches)</option>');
-            control2.prop("disabled", false);
-            if (valores.length > 1) {
-                //Crear opciones de segundo control
-                var contadorArray = 0;
-                for (var i = 27; i <= 53; i++) {
-                    if (inicioBusto == i) {
-                        if (valores[contadorArray] != null) {
-                            control2.append('<option value="' + valores[contadorArray] + '">' + i + '</option>');
-                            inicioBusto++;
-                            contadorArray++;
+            control1.change(function () {
+                var inicioBusto = 0;
+                var finBusto = 0;
+                var valores = "";
+                var control1Sel = control1.val();
+                switch (control1Sel) {
+                    case "27":
+                        inicioBusto = 27;
+                        valores = ["28AA", "28A", "28B", "28C", "28D", "28DD(E)", "28F", "28G",];
+                        break;
+                    case "28":
+                        inicioBusto = 28;
+                        valores = ["28AA", "28A", "28B", "28C", "28D", "28DD(E)", "28F", "28G",];
+                        break;
+                    case "29":
+                        inicioBusto = 29;
+                        valores = ["30AA", "30A", "30B", "30C", "30D", "30DD(E)", "30F", "30G",];
+                        break;
+                    case "30":
+                        inicioBusto = 30;
+                        valores = ["30AA", "30A", "30B", "30C", "30D", "30DD(E)", "30F", "30G",];
+                        break;
+                    case "31":
+                        inicioBusto = 31;
+                        valores = ["32AA", "32A", "32B", "32C", "32D", "32DD(E)", "32F", "32G",];
+                        break;
+                    case "32":
+                        inicioBusto = 32;
+                        valores = ["32AA", "32A", "32B", "32C", "32D", "32DD(E)", "32F", "32G",];
+                        break;
+                    case "33":
+                        inicioBusto = 33;
+                        valores = ["34AA", "34A", "34B", "34C", "34D", "34DD(E)", "34F", "34G",];
+                        break;
+                    case "34":
+                        inicioBusto = 34;
+                        valores = ["34AA", "34A", "34B", "34C", "34D", "34DD(E)", "34F", "34G",];
+                        break;
+                    case "35":
+                        inicioBusto = 35;
+                        valores = ["36AA", "36A", "36B", "36C", "36D", "36DD(E)", "36F", "36G",];
+                        break;
+                    case "36":
+                        inicioBusto = 36;
+                        valores = ["36AA", "36A", "36B", "36C", "36D", "36DD(E)", "36F", "36G",];
+                        break;
+                    case "37":
+                        inicioBusto = 37;
+                        valores = ["38AA", "38A", "38B", "38C", "38D", "38DD(E)", "38F", "38G",];
+                        break;
+                    case "38":
+                        inicioBusto = 38;
+                        valores = ["38AA", "38A", "38B", "38C", "38D", "38DD(E)", "38F", "38G",];
+                        break;
+                    case "39":
+                        inicioBusto = 39;
+                        valores = ["40AA", "40A", "40B", "40C", "40D", "40DD(E)", "40F", "40G",];
+                        break;
+                    case "40":
+                        inicioBusto = 40;
+                        valores = ["40AA", "40A", "40B", "40C", "40D", "40DD(E)", "40F", "40G",];
+                        break;
+                    case "41":
+                        inicioBusto = 41;
+                        valores = ["42AA", "42A", "42B", "42C", "42D", "42DD(E)", "42F", "42G",];
+                        break;
+                    case "42":
+                        inicioBusto = 42;
+                        valores = ["42AA", "42A", "42B", "42C", "42D", "42DD(E)", "42F", "42G",];
+                        break;
+                    case "43":
+                        inicioBusto = 43;
+                        valores = ["44AA", "44A", "44B", "44C", "44D", "44DD(E)", "44F", "44G",];
+                        break;
+                    case "44":
+                        inicioBusto = 44;
+                        valores = ["44AA", "44A", "44B", "44C", "44D", "44DD(E)", "44F", "44G",];
+                        break;
+                    case "45":
+                        inicioBusto = 45;
+                        valores = ["46AA", "46A", "46B", "46C", "46D", "46DD(E)", "46F", "46G",];
+                        break;
+                    case "46":
+                        inicioBusto = 46;
+                        valores = ["46AA", "46A", "46B", "46C", "46D", "46DD(E)", "46F", "46G",];
+                        break;
+                    default:
+                        inicioBusto = 0;
+                        valores = "";
+                }
+                control2.html('');
+                control2.append('<option value="0">BUST (inches)</option>');
+                control2.prop("disabled", false);
+                if (valores.length > 1) {
+                    //Crear opciones de segundo control
+                    var contadorArray = 0;
+                    for (var i = 27; i <= 53; i++) {
+                        if (inicioBusto == i) {
+                            if (valores[contadorArray] != null) {
+                                control2.append('<option value="' + valores[contadorArray] + '">' + i + '</option>');
+                                inicioBusto++;
+                                contadorArray++;
+                            } else {
+                                control2.append('<option value="0">' + i + '</option>');
+                            }
                         } else {
                             control2.append('<option value="0">' + i + '</option>');
                         }
-                    } else {
+                    }
+                    /*for(var i in valores){
+                      control2.append('<option value="'+valores[i]+'">'+inicioBusto+'</option>');
+                      inicioBusto++;
+                    }       */
+                } else {
+                    $('#NoRespuesta').fadeOut();
+                    $('#SiRespuesta').fadeOut();
+                    $('.detalleRespuesta').html("");
+                    $('#detalleRespuesta-complex').html("");
+                    for (var i = 27; i <= 53; i++) {
                         control2.append('<option value="0">' + i + '</option>');
                     }
                 }
-                /*for(var i in valores){
-                  control2.append('<option value="'+valores[i]+'">'+inicioBusto+'</option>');
-                  inicioBusto++;
-                }       */
-            } else {
-                $('#NoRespuesta').fadeOut();
-                $('#SiRespuesta').fadeOut();
-                $('.detalleRespuesta').html("");
-                $('#detalleRespuesta-complex').html("");
-                for (var i = 27; i <= 53; i++) {
-                    control2.append('<option value="0">' + i + '</option>');
+            });
+
+            control2.change(function () {
+                var valorBusto = control2.val();
+                if (valorBusto != "0") {
+                    $('#detalleRespuesta').html(valorBusto);
+                    $('#detalleRespuesta-complex').html("");
+
+                    $('#SiRespuesta').fadeIn();
+                    $('#NoRespuesta').fadeOut();
+                    if (valorBusto === "28AA" || valorBusto === "28A" || valorBusto === "28B" || valorBusto === "28C" || valorBusto === "28D" || valorBusto === "28DD(E)" || valorBusto === "28F" || valorBusto === "28G" || valorBusto === "30AA" || valorBusto === "30F" || valorBusto === "30G" || valorBusto === "32AA" || valorBusto === "32G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, we recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "30A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>30B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "30B" || valorBusto === "30C" || valorBusto === "34AA" || valorBusto === "34A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "30D" || valorBusto === "30DD(E)") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "32A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>30B OR 32B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "32B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>30C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "32C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "32D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "32DD(E)" || valorBusto === "32F") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "34B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32C OR 34C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "34C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32D OR 36B</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "34D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36C OR 38B</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "34DD(E)") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36D OR 38C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "34F" || valorBusto === "34G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36DD(E) OR 38D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "36AA") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34B OR 32C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "36A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34B OR 36B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "36B" || valorBusto === "36C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34C OR 32D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "36D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34DD(E) OR 38C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "36DD(E)" || valorBusto === "36F") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38C OR 38D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "36G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38DD(E) OR 40C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "38AA") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36B OR 34C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "38A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36B OR 34C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "38B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36C OR 34D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "38C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36D OR 40B</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "38D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36DD(E) OR 40C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "38DD(E)") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40C OR 40D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "38F" || valorBusto === "38G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40D OR 40DD(E)</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "40AA") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36B OR 38B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "40A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38B OR 36C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "40B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36D OR 38C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "40C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "40D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38DD(E) OR 42C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "40DD(E)") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42C OR 42D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "40F" || valorBusto === "40G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 42DD(E)</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "42AA") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38B, 38C OR 40B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "42A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38B OR 40B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "42B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38D OR 40C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "42C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38DD(E) OR 40D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "42D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40D OR 40DD(E)</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "42DD(E)") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 44C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "42F" || valorBusto === "42G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 42DD(E) ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "44AA") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40B OR 42B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "44A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42B OR 40C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "44B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42C</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "44C") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 42D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "44D" || valorBusto === "44DD(E)") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42DD(E)</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "44F" || valorBusto === "44G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42DD(E) + Extender </b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "46AA") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42B + double Extender</b> ' + "these have the same volume and may also fit!" + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "46A") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42B OR 40C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
+                    }
+                    if (valorBusto === "46B") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>44C OR 42D</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "46C" || valorBusto === "46D") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>44D OR 42DD(E)</b> ' + "these have the same volume and may also fit!");
+                    }
+                    if (valorBusto === "46DD(E)" || valorBusto === "46F" || valorBusto === "46G") {
+                        $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42DD + double Extender </b> ' + "these have the same volume and may also fit!");
+                    }
                 }
-            }
+                else {
+                    $('#SiRespuesta').fadeOut();
+                    $('#NoRespuesta').fadeIn();
+                    $('.detalleRespuesta').html("");
+                }
+            });
         });
-
-        control2.change(function () {
-            var valorBusto = control2.val();
-            if (valorBusto != "0") {
-                $('#detalleRespuesta').html(valorBusto);
-                $('#detalleRespuesta-complex').html("");
-
-                $('#SiRespuesta').fadeIn();
-                $('#NoRespuesta').fadeOut();
-                if (valorBusto === "28AA" || valorBusto === "28A" || valorBusto === "28B" || valorBusto === "28C" || valorBusto === "28D" || valorBusto === "28DD(E)" || valorBusto === "28F" || valorBusto === "28G" || valorBusto === "30AA" || valorBusto === "30F" || valorBusto === "30G" || valorBusto === "32AA" || valorBusto === "32G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, we recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "30A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>30B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "30B" || valorBusto === "30C" || valorBusto === "34AA" || valorBusto === "34A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "30D" || valorBusto === "30DD(E)") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "32A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>30B OR 32B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "32B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>30C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "32C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "32D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "32DD(E)" || valorBusto === "32F") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "34B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32C OR 34C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "34C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>32D OR 36B</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "34D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36C OR 38B</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "34DD(E)") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36D OR 38C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "34F" || valorBusto === "34G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36DD(E) OR 38D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "36AA") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34B OR 32C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "36A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34B OR 36B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "36B" || valorBusto === "36C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34C OR 32D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "36D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>34DD(E) OR 38C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "36DD(E)" || valorBusto === "36F") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38C OR 38D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "36G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38DD(E) OR 40C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "38AA") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36B OR 34C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "38A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36B OR 34C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "38B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36C OR 34D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "38C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36D OR 40B</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "38D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36DD(E) OR 40C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "38DD(E)") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40C OR 40D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "38F" || valorBusto === "38G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40D OR 40DD(E)</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "40AA") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36B OR 38B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "40A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38B OR 36C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "40B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>36D OR 38C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "40C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "40D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38DD(E) OR 42C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "40DD(E)") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42C OR 42D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "40F" || valorBusto === "40G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 42DD(E)</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "42AA") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38B, 38C OR 40B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "42A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38B OR 40B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "42B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38D OR 40C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "42C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>38DD(E) OR 40D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "42D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40D OR 40DD(E)</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "42DD(E)") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 44C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "42F" || valorBusto === "42G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 42DD(E) ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "44AA") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40B OR 42B</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "44A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42B OR 40C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "44B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42C</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "44C") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>40DD(E) OR 42D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "44D" || valorBusto === "44DD(E)") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42DD(E)</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "44F" || valorBusto === "44G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42DD(E) + Extender </b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "46AA") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42B + double Extender</b> ' + "these have the same volume and may also fit!" + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "46A") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42B OR 40C</b> ' + "these have the same volume and may also fit! We recommend you try our bralettes and/or sports bras." + '<a /collections/bralette"> <u>Check them out!</u></a>');
-                }
-                if (valorBusto === "46B") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>44C OR 42D</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "46C" || valorBusto === "46D") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>44D OR 42DD(E)</b> ' + "these have the same volume and may also fit!");
-                }
-                if (valorBusto === "46DD(E)" || valorBusto === "46F" || valorBusto === "46G") {
-                    $('#detalleRespuesta-complex').html("If your size is unavailable, you can try size " + '<b>42DD + double Extender </b> ' + "these have the same volume and may also fit!");
-                }
-            }
-            else {
-                $('#SiRespuesta').fadeOut();
-                $('#NoRespuesta').fadeIn();
-                $('.detalleRespuesta').html("");
-            }
-        });
-    });
-// ]]></script>
-<h3 class="u-textGreen">How to measure</h3>
-<p><b>Step 1: Band</b><br />Measure your band size by placing your measuring tape right under your arms and over the
-    bust.</p>
-<div class="u-textCenter"><img class="lazyload"
-        data-src="https://cdn.shopify.com/s/files/1/0582/5223/0815/files/bra-size-banda-leonisa-paso1_pulg_480x480_2.jpg?v=1632951637"
-        alt="Cómo medirte la banda" /></div>
-<p><b>Step 2: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape over the fullest
-    part.</p>
-<div class="u-textCenter"><img class="lazyload"
-        data-src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/bra-size-busto-leonisa-paso2_480x480.jpg?v=1620228545"
-        alt="Cómo medir el contorno del busto" /></div>
-
-<div class="u-pad">
-    <p class="u-textCenter u-spaceBottom1">
-        <strong>International equivalence for bras</strong>
-    </p>
-    <table class="u-textShrink1 u-textCenter">
-        <thead class="u-textWhite">
-            <tr>
-                <th style="width: 12%; vertical-align: middle;">
-                    SIZE</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    XS</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    S</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    M</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    L</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    XL</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    2XL</th>
-                <th style="width: 12%; vertical-align: middle;">
-                    3XL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="u-borderRightSm">
-                    U.S/CANADA</td>
-                <td class="u-borderRightSm">
-                    2/4</td>
-                <td class="u-borderRightSm">
-                    4/6</td>
-                <td class="u-borderRightSm">
-                    8/10</td>
-                <td class="u-borderRightSm">
-                    10/12</td>
-                <td class="u-borderRightSm">
-                    14/16</td>
-                <td class="u-borderRightSm">
-                    16/18</td>
-                <td>18/20 </td>
-            </tr>
-            <tr>
-                <td class="u-borderRightSm">
-                    BAND</td>
-                <td class="u-borderRightSm">
-                    27-29"</td>
-                <td class="u-borderRightSm">
-                    30-32"</td>
-                <td class="u-borderRightSm">
-                    33-35"</td>
-                <td class="u-borderRightSm">
-                    36-38"</td>
-                <td class="u-borderRightSm">
-                    39-41"</td>
-                <td class="u-borderRightSm">
-                    42-44"</td>
-                <td>45-47"</td>
-            </tr>
-            <tr>
-                <td class="u-borderRightSm">
-                    BUST</td>
-                <td class="u-borderRightSm">
-                    30-32.5"</td>
-                <td class="u-borderRightSm">
-                    30-32.5"</td>
-                <td class="u-borderRightSm">
-                    35.5-37.5"</td>
-                <td class="u-borderRightSm">
-                    38-40.5"</td>
-                <td class="u-borderRightSm">
-                    41-43.5"</td>
-                <td class="u-borderRightSm">
-                    44-46"</td>
-                <td>46.5-49"</td>
-            </tr>
-            <tr>
-                <td class="u-borderRightSm">
-                    BRA SIZE</td>
-                <td class="u-borderRightSm">
-                    30A<br>30B<br>32A</td>
-                <td class="u-borderRightSm">
-                    30C<br>30D<br>32B<br>34A</td>
-                <td class="u-borderRightSm">
-                    32C<br>32D<br>34B<br>34C<br>36A<br>36B</td>
-                <td class="u-borderRightSm">
-                    34D<br>36C<br>36D<br>38A<br>38B</td>
-                <td class="u-borderRightSm">
-                    38C<br>38D<br>40A<br>40B<br>42A</td>
-                <td class="u-borderRightSm">
-                    40C<br>40D<br>42B<br>44A</td>
-                <td>42C<br>42D<br>44B<br>44C</td>
-            </tr>
-
-        </tbody>
-    </table>
+    // ]]></script>
+    <h3 class="u-textGreen">How to measure</h3>
+    <p><b>Step 1: Band</b><br />Measure your band size by placing your measuring tape right under your arms and over the
+        bust.</p>
+    <div class="u-textCenter"><img class="lazyload"
+            data-src="https://cdn.shopify.com/s/files/1/0582/5223/0815/files/bra-size-banda-leonisa-paso1_pulg_480x480_2.jpg?v=1632951637"
+            alt="Cómo medirte la banda" /></div>
+    <p><b>Step 2: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape over the fullest
+        part.</p>
+    <div class="u-textCenter"><img class="lazyload"
+            data-src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/bra-size-busto-leonisa-paso2_480x480.jpg?v=1620228545"
+            alt="Cómo medir el contorno del busto" /></div>
+    
+    <div class="u-pad">
+        <p class="u-textCenter u-spaceBottom1">
+            <strong>International equivalence for bras</strong>
+        </p>
+        <table class="u-textShrink1 u-textCenter">
+            <thead class="u-textWhite">
+                <tr>
+                    <th style="width: 12%; vertical-align: middle;">
+                        SIZE</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        XS</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        S</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        M</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        L</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        XL</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        2XL</th>
+                    <th style="width: 12%; vertical-align: middle;">
+                        3XL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="u-borderRightSm">
+                        U.S/CANADA</td>
+                    <td class="u-borderRightSm">
+                        2/4</td>
+                    <td class="u-borderRightSm">
+                        4/6</td>
+                    <td class="u-borderRightSm">
+                        8/10</td>
+                    <td class="u-borderRightSm">
+                        10/12</td>
+                    <td class="u-borderRightSm">
+                        14/16</td>
+                    <td class="u-borderRightSm">
+                        16/18</td>
+                    <td>18/20 </td>
+                </tr>
+                <tr>
+                    <td class="u-borderRightSm">
+                        BAND</td>
+                    <td class="u-borderRightSm">
+                        27-29"</td>
+                    <td class="u-borderRightSm">
+                        30-32"</td>
+                    <td class="u-borderRightSm">
+                        33-35"</td>
+                    <td class="u-borderRightSm">
+                        36-38"</td>
+                    <td class="u-borderRightSm">
+                        39-41"</td>
+                    <td class="u-borderRightSm">
+                        42-44"</td>
+                    <td>45-47"</td>
+                </tr>
+                <tr>
+                    <td class="u-borderRightSm">
+                        BUST</td>
+                    <td class="u-borderRightSm">
+                        30-32.5"</td>
+                    <td class="u-borderRightSm">
+                        30-32.5"</td>
+                    <td class="u-borderRightSm">
+                        35.5-37.5"</td>
+                    <td class="u-borderRightSm">
+                        38-40.5"</td>
+                    <td class="u-borderRightSm">
+                        41-43.5"</td>
+                    <td class="u-borderRightSm">
+                        44-46"</td>
+                    <td>46.5-49"</td>
+                </tr>
+                <tr>
+                    <td class="u-borderRightSm">
+                        BRA SIZE</td>
+                    <td class="u-borderRightSm">
+                        30A<br>30B<br>32A</td>
+                    <td class="u-borderRightSm">
+                        30C<br>30D<br>32B<br>34A</td>
+                    <td class="u-borderRightSm">
+                        32C<br>32D<br>34B<br>34C<br>36A<br>36B</td>
+                    <td class="u-borderRightSm">
+                        34D<br>36C<br>36D<br>38A<br>38B</td>
+                    <td class="u-borderRightSm">
+                        38C<br>38D<br>40A<br>40B<br>42A</td>
+                    <td class="u-borderRightSm">
+                        40C<br>40D<br>42B<br>44A</td>
+                    <td>42C<br>42D<br>44B<br>44C</td>
+                </tr>
+    
+            </tbody>
+        </table>
+    </div>
+    <h3 class="u-textGreen">Questions?</h3>
+    <p><span>Call our Customer Service </span><strong>Line at <a href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+            to get expert advice.</span></p>
+    <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
 </div>
-<h3 class="u-textGreen">Questions?</h3>
-<p><span>Call our Customer Service </span><strong>Line at <a href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
-        to get expert advice.</span></p>
