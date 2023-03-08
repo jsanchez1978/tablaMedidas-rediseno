@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- llamado temporal de estilos -->
 <link rel="stylesheet" href="./style-temp.css">
 <link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/theme.css">
@@ -28,8 +29,27 @@
                 .titularesH3New {
                     color: #030303;
                     font-size: 19px;
-                    margin: 0 !important;
                     font-weight: 600;
+                }
+                .spaceClear {
+                    margin: 0 !important;
+                }
+                .checkBoxDiseno {
+                    border-radius: 30px;
+                    text-align: center;
+                    border-color: #f5ece3;
+                    background-color: #f8f5ee;
+                    padding: 12px 10px;
+                }
+
+                .checkBoxDiseno:active {
+                    border-color: #f4d5b6 !important;
+                }
+                .checkBoxDiseno:focus {
+                    border-color: #f4d5b6 !important;
+                }
+                .boderIzqBox {
+                    border-right: 2px solid #eeeae0;
                 }
 
                 /* Toggle style */
@@ -96,13 +116,20 @@
                 color: #030303;
                 }
                 /* Fin Toggle style */
+
+
+                @media only screen and (max-width: 600px) {
+                    .boderIzqBox {
+                        border: none;
+                        }
+                    }
             </style>
         <!-- Fin Estilos quemados de reemplazo -->
     <!-- Seccion tabla -->
     <div id="contTable1" class="u-pad u-spaceTop5">
         <!-- tooggle swicht close -->
         <div class="contToggleBox u-spaceBottom4">
-            <h3 class="titularesH3New u-padRight2">Size Guide</h3>
+            <h3 class="titularesH3New spaceClear u-padRight2">Size Guide</h3>
             <label class="label">
                 <div class="toggle">
                     <input class="toggle-state" type="checkbox" name="check" value="check" />
@@ -206,7 +233,7 @@
     
             </tbody>
         </table>
-        <table id="tablaNew2" class="u-textShrink1 u-textCenter tableOff">
+        <table id="tablaNew2" class="u-textShrink1 u-textCenter tableOff u-spaceBottom5">
             <thead class="u-textWhite">
                 <tr id="clearBarraTabla">
                     <th style="width: 12%; vertical-align: middle;">
@@ -301,13 +328,13 @@
         </table>
     </div>
     <!-- Fin Seccion tabla -->
-    <h3 class="u-textGreen">Find your size</h3>
+    <h3 class="titularesH3New">Find your size</h3>
     <p>Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
         accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.</p>
-    <div class="u-boxSilver u-pad3"><span>Size calculator: Choose the measurements in inches</span>
+    <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in inches</span>
         <div class="grid">
             <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
-                    class="Input u-fullWidth u-spaceEnds" id="control1">
+                    class="Input u-fullWidth u-spaceEnds checkBoxDiseno" id="control1">
                     <option value="0">Band</option>
                     <option value="27">27</option>
                     <option value="28">28</option>
@@ -331,10 +358,10 @@
                     <option value="46">46</option>
                 </select></div>
             <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
-                    class="Input u-fullWidth u-spaceEnds" disabled="disabled" id="control2">
+                    class="Input u-fullWidth u-spaceEnds checkBoxDiseno" disabled="disabled" id="control2">
                     <option value="0">Bust</option>
                 </select></div>
-            <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta">
+            <div class="respuestaAfirmativa grid__item u-textCenter u-pad1 u-spaceTop3" id="SiRespuesta">
                 <div class="tituloRespuesta">YOUR SIZE</div>
                 <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
                         id="detalleRespuesta"> </b><br /> <span class="section-header__title u-space0"
@@ -650,20 +677,29 @@
             });
         });
     // ]]></script>
-    <h3 class="u-textGreen">How to measure</h3>
-    <p><b>Step 1: Band</b><br />Measure your band size by placing your measuring tape right under your arms and over the
-        bust.</p>
-    <div class="u-textCenter"><img class="lazyload"
-            data-src="https://cdn.shopify.com/s/files/1/0582/5223/0815/files/bra-size-banda-leonisa-paso1_pulg_480x480_2.jpg?v=1632951637"
-            alt="Cómo medirte la banda" /></div>
-    <p><b>Step 2: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape over the fullest
-        part.</p>
-    <div class="u-textCenter"><img class="lazyload"
-            data-src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/bra-size-busto-leonisa-paso2_480x480.jpg?v=1620228545"
-            alt="Cómo medir el contorno del busto" /></div>
-    <h3 class="u-textGreen">Questions?</h3>
-    <p><span>Call our Customer Service </span><strong>Line at <a href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
-            to get expert advice.</span></p>
+    <h3 class="titularesH3New">How to measure</h3>
+    <div class="grid">
+        <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox">
+            <p><b>Step 1: Band</b><br />Measure your band size by placing your measuring tape right under your arms and over the
+                bust.</p>
+            <div class="u-textCenter"><img
+                    src="https://cdn.shopify.com/s/files/1/0582/5223/0815/files/bra-size-banda-leonisa-paso1_pulg_480x480_2.jpg?v=1632951637"
+                    alt="Cómo medirte la banda" /></div>
+        </div>
+        <div class="grid__item small--one-whole medium-up--two-quarters">
+            <p><b>Step 2: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape over the fullest
+                part.</p>
+            <div class="u-textCenter"><img
+                    src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/bra-size-busto-leonisa-paso2_480x480.jpg?v=1620228545"
+                    alt="Cómo medir el contorno del busto" /></div>
+        </div>
+    </div>
+    <div class="u-textCenter">
+        <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+        <p><span>Call our Customer Service </span><strong>Line at <a href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                to get expert advice.</span></p>
+    </div>
+    
 
 
 <script>
