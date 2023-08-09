@@ -10,38 +10,43 @@
     <!-- COPIAR CONTENIDO DESDE AQUI -->
     <!-- Estilos quemados de reemplazo -->
     <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
         .temporalContiene700 td,
         th {
             background: inherit;
         }
-
+    
         #clearBarraTabla th {
             background-color: white !important;
             color: black;
         }
-
+    
         #contTable1 table td {
             border-bottom: 0px !important;
+            background: none !important;
         }
-
+    
         #contTable1 table tbody tr:nth-child(odd) {
             background-color: #f8f5ee !important;
         }
-
+    
         #contTable1 table tbody tr:nth-child(even) {
             background-color: #ffffff !important;
         }
-
+    
         .titularesH3New {
             color: #030303;
             font-size: 19px;
             font-weight: 600;
         }
-
+    
         .spaceClear {
             margin: 0 !important;
         }
-
+    
         .checkBoxDiseno {
             border-radius: 30px;
             text-align: center;
@@ -49,45 +54,46 @@
             background-color: #f8f5ee;
             padding: 12px 10px;
         }
-
+    
         .checkBoxDiseno:active {
             border-color: #f4d5b6 !important;
         }
-
+    
         .checkBoxDiseno:focus {
             border-color: #f4d5b6 !important;
         }
-
+    
         .boderIzqBox {
             border-right: 2px solid #eeeae0;
         }
-
+    
         /* Toggle style */
         .contToggleBox {
             display: flex;
             align-items: center;
         }
-
+    
         .tableActive {
             display: block;
         }
-
+    
         .tableOff {
             display: none;
         }
-
-        .label {
+    
+        #contTable1 .label {
             display: inline-flex;
             align-items: center;
             cursor: pointer;
             color: #394a56;
             margin: 0 !important;
+            letter-spacing: 0 !important;
         }
-
+    
         .label-text {
             margin-left: 9px;
         }
-
+    
         .toggle {
             isolation: isolate;
             position: relative;
@@ -97,24 +103,24 @@
             overflow: hidden;
             border: solid 2px #f6f0e9;
         }
-
+    
         .toggle-state {
             display: none;
         }
-
+    
         .indicator {
             border: 3px solid white;
             height: 100%;
             width: 45%;
             background: #030303;
             border-radius: 15px;
-            transform: translate3d(108%, 0, 0);
+            transform: translate3d(121%, 0, 0);
         }
-
+    
         .toggle-state:checked~.indicator {
             transform: translate3d(5%, 0, 0);
         }
-
+    
         .in {
             position: absolute;
             top: 7px;
@@ -122,18 +128,18 @@
             font-size: 11px;
             color: #030303;
         }
-
-        .cm {
+    
+        .cms {
             position: absolute;
             top: 7px;
             right: 4px;
             font-size: 11px;
             color: #030303;
         }
-
+    
         /* Fin Toggle style */
-
-
+    
+    
         @media only screen and (max-width: 600px) {
             .boderIzqBox {
                 border: none;
@@ -151,7 +157,7 @@
                     <input class="toggle-state" type="checkbox" name="check" value="check" />
                     <span class="in">IN</span>
                     <div class="indicator"></div>
-                    <span class="cm">CM</span>
+                    <span class="cms">CM</span>
                 </div>
             </label>
         </div>
@@ -628,9 +634,7 @@
         </div>
         <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
     </div>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-en-pul.js"></script>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-en-cm.js"></script>
     <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
 </div>
-
-
-<script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-en-pul.js"></script>
-<script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-en-cm.js"></script>
