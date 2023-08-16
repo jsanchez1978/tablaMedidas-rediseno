@@ -8,38 +8,6 @@
 
 <div class="temporalContiene700 rte">
     <!-- COPIAR CONTENIDO DESDE AQUI -->
-    <style>
-        /* ESTILOS SOLO PARA LA OPCION DE DESPALZAMIENTO */
-        .table-container {
-            position: relative;
-            overflow: auto;
-            max-width: 100%;
-            padding-bottom: 30px;
-        }
-    
-        #scrollable-table {
-            width: 100%;
-            border-collapse: collapse;
-            /* Otros estilos de tabla */
-        }
-    
-        @media only screen and (max-width: 600px) {
-            .table-container.scrolled::after {
-                content: "⬅️ Scroll to see more ➡️";
-                /* Iconos de flechas */
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: #f0f0f0;
-                padding: 5px;
-                border-radius: 5px;
-                white-space: nowrap;
-            }
-        }
-    
-        /*FIN ESTILOS SOLO PARA LA OPCION DE DESPALZAMIENTO */
-    </style>
     <!-- Estilos quemados de reemplazo -->
     <style>
         .custom-label #contTable1 {
@@ -204,7 +172,7 @@
         <div id="contenedor-inches" class="tableActive">
             <section>
                 <h3 class="titularesH3New">Another way to find your size</h3>
-                <div class="table-wrapper table-container scrolled">
+                <div class="table-wrapper">
                     <table class="u-textShrink1 u-textCenter">
                         <tbody>
                             <tr id="clearBarraTabla">
@@ -681,20 +649,4 @@
     <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-en-pul.js"></script>
     <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-en-cm.js"></script>
     <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
-
-
-
-
-<script>
-    const tableContainer = document.querySelector('.table-container');
-    const scrollableTable = document.getElementById('scrollable-table');
-
-    tableContainer.addEventListener('scroll', () => {
-        if (tableContainer.scrollLeft == 0) {
-            tableContainer.classList.add('scrolled');
-        } else {
-            tableContainer.classList.remove('scrolled');
-        }
-    });
-</script>
 </div>
