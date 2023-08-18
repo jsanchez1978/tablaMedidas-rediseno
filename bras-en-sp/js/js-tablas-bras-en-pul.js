@@ -147,7 +147,7 @@
              if (valorBusto === "38C") {
                  $('#detalleRespuesta-complex').hhtml("If your size is unavailable, you can try our bralettes and/or sports bras in Size XL." + '<a href="/collections/bralette"> <u>Check them out!</u></a>');
              }
-             if (valorBusto === "38DD") {
+             if (valorBusto === "38DD/E") {
                  $('#detalleRespuesta-complex').hhtml("If your size is unavailable, you can try our bralettes and/or sports bras in Size 2XL." + '<a href="/collections/bralette"> <u>Check them out!</u></a>');
              }
              if (valorBusto === "40B") {
@@ -159,7 +159,7 @@
              if (valorBusto === "40D") {
                  $('#detalleRespuesta-complex').hhtml("If your size is unavailable, you can try our bralettes and/or sports bras in Size 2XL." + '<a href="/collections/bralette"> <u>Check them out!</u></a>');
              }
-             if (valorBusto === "40DD") {
+             if (valorBusto === "40DD/E") {
                  $('#detalleRespuesta-complex').hhtml("If your size is unavailable, you can try our bralettes and/or sports bras in Size 3XL." + '<a href="/collections/bralette"> <u>Check them out!</u></a>');
              }
              if (valorBusto === "42B") {
@@ -171,7 +171,7 @@
              if (valorBusto === "42D") {
                  $('#detalleRespuesta-complex').hhtml("If your size is unavailable, you can try our bralettes and/or sports bras in Size 3XL." + '<a href="/collections/bralette"> <u>Check them out!</u></a>');
              }
-             if (valorBusto === "42DD") {
+             if (valorBusto === "42DD/E") {
                  $('#detalleRespuesta-complex').hhtml("If your size is unavailable, you can try our bralettes and/or sports bras in Size 3XL." + '<a href="/collections/bralette"> <u>Check them out!</u></a>');
              }
 

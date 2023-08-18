@@ -408,7 +408,7 @@ $(document).ready(function () {
                 $('#detalleRespuesta-complex-cm').html("If your size is unavailable, you can try size " + '<b>44D OR 42E</b> ' + "these have the same volume and may also fit!");
             }
             if (valorBusto_cm === "46E" || valorBusto_cm === "46F" || valorBusto_cm === "46G") {
-                $('#detalleRespuesta-complex-cm').html("If your size is unavailable, you can try size " + '<b>42DD + double Extender </b> ' + "these have the same volume and may also fit!");
+                $('#detalleRespuesta-complex-cm').html("If your size is unavailable, you can try size " + '<b>42DD/E + double Extender </b> ' + "these have the same volume and may also fit!");
             }
         }
         else {
