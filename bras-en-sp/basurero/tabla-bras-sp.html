@@ -6,92 +6,42 @@
 <script type="text/javascript" src="./js/jquery-3.6.3.min.js"></script>
 <!--Fin llamado temporal de estilos -->
 
-
-
-
-
-
-
 <div class="temporalContiene700 rte">
-    <style>
-        .table-wrapper::-webkit-scrollbar {
-    -webkit-appearance: none;
-    -webkit-overflow-scrolling: touch;
-}
-
-.table-wrapper::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.table-wrapper::-webkit-scrollbar-button:increment,.table-wrapper::-webkit-scrollbar-button {
-    display: none;
-} 
-
-.table-wrapper::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.table-wrapper::-webkit-scrollbar-thumb {
-    background-color: #797979;
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-}
-
-.table-wrapper::-webkit-scrollbar-track {
-    border-radius: 10px;  
-}
-</style>
-
-
-
-
-
     <!-- COPIAR CONTENIDO DESDE AQUI -->
     <!-- Estilos quemados de reemplazo -->
     <style>
-        .custom-label #contTable1 {
-            font-family: AGNextRegular;
-            font-size: 18px !important;
-        }
-        .u-paddingSides5 {
-            padding: 0 5px !important;
-        }
-        .u-paddingSides12 {
-            padding: 0 12px !important;
-        }
         .temporalContiene700 td,
         th {
             background: inherit;
         }
-    
+
         #clearBarraTabla th {
-            background-color: #f6f1e9 !important;
+            background-color: white !important;
             color: black;
         }
-    
+
         #contTable1 table td {
             border-bottom: 0px !important;
-            /* background: none !important; */
         }
-    
+
         #contTable1 table tbody tr:nth-child(odd) {
             background-color: #f8f5ee !important;
         }
-    
+
         #contTable1 table tbody tr:nth-child(even) {
             background-color: #ffffff !important;
         }
-    
+
         .titularesH3New {
             color: #030303;
             font-size: 19px;
             font-weight: 600;
         }
-    
+
         .spaceClear {
             margin: 0 !important;
         }
-    
+
         .checkBoxDiseno {
             border-radius: 30px;
             text-align: center;
@@ -99,46 +49,45 @@
             background-color: #f8f5ee;
             padding: 12px 10px;
         }
-    
+
         .checkBoxDiseno:active {
             border-color: #f4d5b6 !important;
         }
-    
+
         .checkBoxDiseno:focus {
             border-color: #f4d5b6 !important;
         }
-    
+
         .boderIzqBox {
             border-right: 2px solid #eeeae0;
         }
-    
+
         /* Toggle style */
         .contToggleBox {
             display: flex;
             align-items: center;
         }
-    
+
         .tableActive {
             display: block;
         }
-    
+
         .tableOff {
             display: none;
         }
-    
-        #contTable1 .label {
+
+        .label {
             display: inline-flex;
             align-items: center;
             cursor: pointer;
             color: #394a56;
             margin: 0 !important;
-            letter-spacing: 0 !important;
         }
-    
+
         .label-text {
             margin-left: 9px;
         }
-    
+
         .toggle {
             isolation: isolate;
             position: relative;
@@ -148,43 +97,43 @@
             overflow: hidden;
             border: solid 2px #f6f0e9;
         }
-    
+
         .toggle-state {
             display: none;
         }
-    
+
         .indicator {
             border: 3px solid white;
             height: 100%;
             width: 45%;
             background: #030303;
             border-radius: 15px;
-            transform: translate3d(121%, 0, 0);
+            transform: translate3d(108%, 0, 0);
         }
-    
+
         .toggle-state:checked~.indicator {
             transform: translate3d(5%, 0, 0);
         }
-    
+
         .in {
             position: absolute;
             top: 7px;
             left: 7px;
-            font-size: 9.8px;
+            font-size: 11px;
             color: #030303;
         }
-    
-        .cms {
+
+        .cm {
             position: absolute;
             top: 7px;
             right: 4px;
-            font-size: 9.8px;
+            font-size: 11px;
             color: #030303;
         }
-    
+
         /* Fin Toggle style */
-    
-    
+
+
         @media only screen and (max-width: 600px) {
             .boderIzqBox {
                 border: none;
@@ -200,9 +149,9 @@
             <label class="label">
                 <div class="toggle">
                     <input class="toggle-state" type="checkbox" name="check" value="check" />
-                    <span class="in">PUL</span>
+                    <span class="in">PU</span>
                     <div class="indicator"></div>
-                    <span class="cms">CM</span>
+                    <span class="cm">CM</span>
                 </div>
             </label>
         </div>
@@ -218,16 +167,16 @@
                                 <th colspan="7" style="text-align: center;">BRA(pul)</th>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; width:21%; background-color: #efe5db;"><b>Paso 1: bajo tu busto</b></td>
-                                <td style="font-size: 12px; width:10%;"><b>TALLA Bra</b></td>
+                                <td class="color-b" style="font-size: 12px; width:40%;"><b>Step 1: Underbust</b></td>
+                                <td style="font-size: 12px; width:10%;"><b>Bra SIZE</b></td>
                                 <td class="color-c" colspan="5" style="padding:0; font-size: 12px;">
                                     <div class="table-wrapper">
                                         <table>
                                             <tbody>
                                                 <tr>
                                                     <td class="color-c" colspan="5"
-                                                        style="border-right: none !important;border-left: none !important; font-size: 12px; text-align: center; background-color: #efeae4;">
-                                                        <b>Paso 2: Sobre tu busto</b>
+                                                        style="border-right: none !important;border-left: none !important; font-size: 12px; text-align: center;">
+                                                        <b>Step 2: Overbust</b>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -245,7 +194,7 @@
                                                         D</td>
                                                     <td
                                                         style="border-bottom: none !important;border-right: none !important;width:20%;border-left: none !important; font-size: 12px;">
-                                                        DD/E</td>
+                                                        DD</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -253,67 +202,67 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">25-27"</td>
+                                <td class="color-b" style="font-size: 12px;">25-27"</td>
                                 <td style="font-size: 12px;">30</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">29-31"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">30-32"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">31-33"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">32-35"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">34-36"</td>
+                                <td class="color-c" style="font-size: 12px;">29-31"</td>
+                                <td class="color-c" style="font-size: 12px;">30-32"</td>
+                                <td class="color-c" style="font-size: 12px;">31-33"</td>
+                                <td class="color-c" style="font-size: 12px;">32-35"</td>
+                                <td class="color-c" style="font-size: 12px;">34-36"</td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">27-28.5"</td>
+                                <td class="color-b" style="font-size: 12px;">27-28.5"</td>
                                 <td style="font-size: 12px;">32</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">31-33"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">32.5-34.5"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">33-35"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">34-37"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">36-38"</td>
+                                <td class="color-c" style="font-size: 12px;">31-33"</td>
+                                <td class="color-c" style="font-size: 12px;">32.5-34.5"</td>
+                                <td class="color-c" style="font-size: 12px;">33-35"</td>
+                                <td class="color-c" style="font-size: 12px;">34-37"</td>
+                                <td class="color-c" style="font-size: 12px;">36-38"</td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">29-30.5"</td>
+                                <td class="color-b" style="font-size: 12px;">29-30.5"</td>
                                 <td style="font-size: 12px;">34</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">33-35"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">34-36.5"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">35.5-38"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">36.5-39"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">38-40"</td>
+                                <td class="color-c" style="font-size: 12px;">33-35"</td>
+                                <td class="color-c" style="font-size: 12px;">34-36.5"</td>
+                                <td class="color-c" style="font-size: 12px;">35.5-38"</td>
+                                <td class="color-c" style="font-size: 12px;">36.5-39"</td>
+                                <td class="color-c" style="font-size: 12px;">38-40"</td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">31-32.5"</td>
+                                <td class="color-b" style="font-size: 12px;">31-32.5"</td>
                                 <td style="font-size: 12px;">36</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">35-37"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">36-38.5"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">37.5-40"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">38.5-41"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">40-42"</td>
+                                <td class="color-c" style="font-size: 12px;">35-37"</td>
+                                <td class="color-c" style="font-size: 12px;">36-38.5"</td>
+                                <td class="color-c" style="font-size: 12px;">37.5-40"</td>
+                                <td class="color-c" style="font-size: 12px;">38.5-41"</td>
+                                <td class="color-c" style="font-size: 12px;">40-42"</td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">33-34.5"</td>
+                                <td class="color-b" style="font-size: 12px;">33-34.5"</td>
                                 <td style="font-size: 12px;">38</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">37-39"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">39-40.5"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">39.5-42"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">40.5-43"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">42-44"</td>
+                                <td class="color-c" style="font-size: 12px;">37-39"</td>
+                                <td class="color-c" style="font-size: 12px;">39-40.5"</td>
+                                <td class="color-c" style="font-size: 12px;">39.5-42"</td>
+                                <td class="color-c" style="font-size: 12px;">40.5-43"</td>
+                                <td class="color-c" style="font-size: 12px;">42-44"</td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">35-36.5"</td>
+                                <td class="color-b" style="font-size: 12px;">35-36.5"</td>
                                 <td style="font-size: 12px;">40</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">39-41"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">40-42.5"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">41.5-44"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">42.5-45"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">44-46"</td>
+                                <td class="color-c" style="font-size: 12px;">39-41"</td>
+                                <td class="color-c" style="font-size: 12px;">40-42.5"</td>
+                                <td class="color-c" style="font-size: 12px;">41.5-44"</td>
+                                <td class="color-c" style="font-size: 12px;">42.5-45"</td>
+                                <td class="color-c" style="font-size: 12px;">44-46"</td>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; background-color: #efe5db;">37-38.5"</td>
+                                <td class="color-b" style="font-size: 12px;">37-38.5"</td>
                                 <td style="font-size: 12px;">42</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">41-43"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">42-44.5"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">43.5-46"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">44.5-47"</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">46-48"</td>
+                                <td class="color-c" style="font-size: 12px;">41-43"</td>
+                                <td class="color-c" style="font-size: 12px;">42-44.5"</td>
+                                <td class="color-c" style="font-size: 12px;">43.5-46"</td>
+                                <td class="color-c" style="font-size: 12px;">44.5-47"</td>
+                                <td class="color-c" style="font-size: 12px;">46-48"</td>
                             </tr>
                         </tbody>
                     </table>
@@ -322,13 +271,13 @@
             <section class="u-spaceTop5">
                 <h3 class="titularesH3New">Encuentra tu talla</h3>
                 <p>Encuentra la talla perfecta siguiendo estos pasos. Cuando te midas, usa un brasier cómodo sin relleno para obtener
-                una medición precisa. Una vez que tengas tus medidas, utiliza la calculadoa de tallas para averiguar cuál te quedará
-                bien.</p>
+                    una medición precisa. Una vez que tengas tus medidas, utiliza la calculadoa de tallas para averiguar cuál te quedará
+                    bien.</p>
                 <div><span class="u-spaceBottom3" style="display: block;">Calculadora de tallas: Elige las medidas en pulgadas</span>
                     <div class="grid">
-                        <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
+                        <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
                                 class="Input u-fullWidth u-spaceEnds checkBoxDiseno" id="control1">
-                                <option value="0">Band (pul.)</option>
+                                <option value="0">Banda (pul.)</option>
                                 <option value="27">27</option>
                                 <option value="28">28</option>
                                 <option value="29">29</option>
@@ -350,7 +299,7 @@
                                 <option value="45">45</option>
                                 <option value="46">46</option>
                             </select></div>
-                        <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
+                        <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
                                 class="Input u-fullWidth u-spaceEnds checkBoxDiseno" disabled="disabled" id="control2">
                                 <option value="0">Busto (pul.)</option>
                             </select></div>
@@ -366,10 +315,11 @@
                     </div>
                 </div>
             </section>
+            
             <section class="u-spaceTop5">
                 <h3 class="titularesH3New">¿Cómo Medirte?</h3>
                 <div class="grid">
-                    <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox">
                         <p><b>Paso 1: Banda</b><br />Mide en pulgadas tu talla de banda ubicando la cinta métrica justo debajo de los
                             brazos y
                             sobre el pecho.</p>
@@ -377,7 +327,7 @@
                                 src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-base-busto_3f9574e5-5896-48f8-a132-064782c37954.png?v=1689785804"
                                 alt="Cómo medirte la banda" /></div>
                     </div>
-                    <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                    <div class="grid__item small--one-whole medium-up--two-quarters">
                         <p><b>Paso 2: Busto</b><br />Mide en pulgadas el contono de tu pecho ubicando la cinta métrica sobre la parte
                             con más
                             volumen.</p>
@@ -387,85 +337,81 @@
                     </div>
                 </div>
             </section>
+            
             <section class="u-spaceTop5">
-                <h3 class="titularesH3New">Equivalencia internacional para Bras</h3>
-                <div class="table-wrapper">
-                    <table id="tablaNew" class="u-textCenter" style="font-size: 12px !important;">
-                        <thead class="u-textWhite">
-                            <tr id="clearBarraTabla">
-                                <th style="width: 8%; vertical-align: middle;">TALLA</th>
-                                <th style="width: 8%; vertical-align: middle;">XS</th>
-                                <th style="width: 8%; vertical-align: middle;">S</th>
-                                <th style="width: 8%; vertical-align: middle;">M</th>
-                                <th style="width: 8%; vertical-align: middle;">L</th>
-                                <th style="width: 8%; vertical-align: middle;">XL</th>
-                                <th style="width: 8%; vertical-align: middle;">2XL</th>
-                                <th style="width: 8%; vertical-align: middle;">3XL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="u-borderRightSm" style="font-size: 12px;">
-                                    <p>U.S/<br>CA</p>
-                                    <b> </b>
-                                </td>
-                                <td class="u-borderRightSm">2/4</td>
-                                <td class="u-borderRightSm">4/6</td>
-                                <td class="u-borderRightSm">8/10</td>
-                                <td class="u-borderRightSm">10/12</td>
-                                <td class="u-borderRightSm">14/16</td>
-                                <td class="u-borderRightSm">16/18</td>
-                                <td class="u-borderRightSm">18/20</td>
-                            </tr>
-                            <tr>
-                                <td class="u-borderRightSm">BAND</td>
-                                <td class="u-borderRightSm">27-29"</td>
-                                <td class="u-borderRightSm">30-32"</td>
-                                <td class="u-borderRightSm">33-35"</td>
-                                <td class="u-borderRightSm">36-38"</td>
-                                <td class="u-borderRightSm">39-41"</td>
-                                <td class="u-borderRightSm">42-44"</td>
-                                <td class="u-borderRightSm">45-47"</td>
-                            </tr>
-                            <tr>
-                                <td class="u-borderRightSm">BUSTO</td>
-                                <td class="u-borderRightSm">30-32.5"</td>
-                                <td class="u-borderRightSm">30-32.5"</td>
-                                <td class="u-borderRightSm">35.5-37.5"</td>
-                                <td class="u-borderRightSm">38-40.5"</td>
-                                <td class="u-borderRightSm">41-43.5"</td>
-                                <td class="u-borderRightSm">44-46"</td>
-                                <td class="u-borderRightSm">46.5-49"</td>
-                            </tr>
-                            <tr>
-                                <td class="u-borderRightSm">TALLA BRA</td>
-                                <td class="u-borderRightSm">30A<br>30B<br>32A</td>
-                                <td class="u-borderRightSm">30C<br>30D<br>32B<br>34A</td>
-                                <td class="u-borderRightSm">32C<br>32D<br>34B<br>34C<br>36A<br>36B
-                                </td>
-                                <td class="u-borderRightSm">34D<br>36C<br>36D<br>38A<br>38B</td>
-                                <td class="u-borderRightSm">38C<br>38D<br>40A<br>40B<br>42A</td>
-                                <td class="u-borderRightSm">40C<br>40D<br>42B<br>44A</td>
-                                <td class="u-borderRightSm">42C<br>42D<br>44B<br>44C</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <h3 class="titularesH3New">International equivalence for bras</h3>
+                <table id="tablaNew" class="u-textCenter" style="font-size: 12px !important;">
+                    <thead class="u-textWhite">
+                        <tr id="clearBarraTabla">
+                            <th style="width: 8%; vertical-align: middle;">SIZE</th>
+                            <th style="width: 8%; vertical-align: middle;">XS</th>
+                            <th style="width: 8%; vertical-align: middle;">S</th>
+                            <th style="width: 8%; vertical-align: middle;">M</th>
+                            <th style="width: 8%; vertical-align: middle;">L</th>
+                            <th style="width: 8%; vertical-align: middle;">XL</th>
+                            <th style="width: 8%; vertical-align: middle;">2XL</th>
+                            <th style="width: 8%; vertical-align: middle;">3XL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="u-borderRightSm" style="font-size: 12px;">
+                                <p>U.S/<br />CA</p>
+                                <b> </b>
+                            </td>
+                            <td class="u-borderRightSm">2/4</td>
+                            <td class="u-borderRightSm">4/6</td>
+                            <td class="u-borderRightSm">8/10</td>
+                            <td class="u-borderRightSm">10/12</td>
+                            <td class="u-borderRightSm">14/16</td>
+                            <td class="u-borderRightSm">16/18</td>
+                            <td class="u-borderRightSm">18/20</td>
+                        </tr>
+                        <tr>
+                            <td class="u-borderRightSm">BAND</td>
+                            <td class="u-borderRightSm">27-29"</td>
+                            <td class="u-borderRightSm">30-32"</td>
+                            <td class="u-borderRightSm">33-35"</td>
+                            <td class="u-borderRightSm">36-38"</td>
+                            <td class="u-borderRightSm">39-41"</td>
+                            <td class="u-borderRightSm">42-44"</td>
+                            <td class="u-borderRightSm">45-47"</td>
+                        </tr>
+                        <tr>
+                            <td class="u-borderRightSm">BUST</td>
+                            <td class="u-borderRightSm">30-32.5"</td>
+                            <td class="u-borderRightSm">30-32.5"</td>
+                            <td class="u-borderRightSm">35.5-37.5"</td>
+                            <td class="u-borderRightSm">38-40.5"</td>
+                            <td class="u-borderRightSm">41-43.5"</td>
+                            <td class="u-borderRightSm">44-46"</td>
+                            <td class="u-borderRightSm">46.5-49"</td>
+                        </tr>
+                        <tr>
+                            <td class="u-borderRightSm">BRA SIZE</td>
+                            <td class="u-borderRightSm">30A<br />30B<br />32A</td>
+                            <td class="u-borderRightSm">30C<br />30D<br />32B<br />34A</td>
+                            <td class="u-borderRightSm">32C<br />32D<br />34B<br />34C<br />36A<br />36B
+                            </td>
+                            <td class="u-borderRightSm">34D<br />36C<br />36D<br />38A<br />38B</td>
+                            <td class="u-borderRightSm">38C<br />38D<br />40A<br />40B<br />42A</td>
+                            <td class="u-borderRightSm">40C<br />40D<br />42B<br />44A</td>
+                            <td class="u-borderRightSm">42C<br />42D<br />44B<br />44C</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
-            <section>
-                <div class="u-textCenter">
-                    <h3 class="titularesH3New u-spaceTop5">¿Dudas?</h3>
-                    <p><span>Comunícate a nuestra </span><strong>Línea de Atención al cliente <a
-                                href="tel:1-800-657-9107">1-800-657-9107</a></strong><span> y recibe asesoía de nuestras expertas.</span>
-                    </p>
-                </div>
-            </section>
+            <div class="u-textCenter">
+                <h3 class="titularesH3New u-spaceTop5">¿Dudas?</h3>
+                <p><span>Comunícate a nuestra </span><strong>Línea de Atención al cliente <a
+                        href="tel:1-800-657-9107">1-800-657-9107</a></strong><span> y recibe asesoía de nuestras expertas.</span></p>
+            </div>
         </div>
         <!-- FIN CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
 
         <!-- CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
         <div id="contenedor-cms" class="tableOff">
-            <section class="u-spaceBottom5">
+            <section>
                 <h3 class="titularesH3New">Otra forma de encontrar tu talla</h3>
                 <div class="table-wrapper">
                     <table class="u-textShrink1 u-textCenter">
@@ -474,7 +420,7 @@
                                 <th colspan="7" style="text-align: center;">BRA(cms)</th>
                             </tr>
                             <tr>
-                                <td class="color-b" style="font-size: 12px; width:21%; background-color: #efe5db;"><b>Paso 1: base busto</b></td>
+                                <td class="color-b" style="font-size: 12px; width:40%;"><b>Paso 1: base busto</b></td>
                                 <td style="font-size: 12px; width:10%;"><b>TALLA Bra</b></td>
                                 <td class="color-c" colspan="5" style="padding:0; font-size: 12px;">
                                     <div class="table-wrapper">
@@ -482,7 +428,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="color-c" colspan="5"
-                                                        style="border-right: none !important;border-left: none !important; font-size: 12px; text-align: center; background-color: #efeae4;">
+                                                        style="border-right: none !important;border-left: none !important; font-size: 12px; text-align: center;">
                                                         <b>Paso 2: contorno busto</b>
                                                     </td>
                                                 </tr>
@@ -501,7 +447,7 @@
                                                         D</td>
                                                     <td
                                                         style="border-bottom: none !important;border-right: none !important;width:20%;border-left: none !important; font-size: 12px;">
-                                                        DD/E</td>
+                                                        DD</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -509,80 +455,80 @@
                                 </td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">63 - 67</td>
+                                <td class="color-b" style="font-size: 12px;">63 - 67</td>
                                 <td style="font-size: 12px;">30</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">75-80</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">77-83</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">80-85</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">82-89</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">86-92</td>
+                                <td class="color-c" style="font-size: 12px;">75-80</td>
+                                <td class="color-c" style="font-size: 12px;">77-83</td>
+                                <td class="color-c" style="font-size: 12px;">80-85</td>
+                                <td class="color-c" style="font-size: 12px;">82-89</td>
+                                <td class="color-c" style="font-size: 12px;">86-92</td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">68 - 72</td>
+                                <td class="color-b" style="font-size: 12px;">68 - 72</td>
                                 <td style="font-size: 12px;">32</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">79-85</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">82-88</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">85-91</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">88-94</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">91-97</td>
+                                <td class="color-c" style="font-size: 12px;">79-85</td>
+                                <td class="color-c" style="font-size: 12px;">82-88</td>
+                                <td class="color-c" style="font-size: 12px;">85-91</td>
+                                <td class="color-c" style="font-size: 12px;">88-94</td>
+                                <td class="color-c" style="font-size: 12px;">91-97</td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">73 - 77</td>
+                                <td class="color-b" style="font-size: 12px;">73 - 77</td>
                                 <td style="font-size: 12px;">34</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">84-90</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">87-93</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">90-96</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">93-99</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">96-102</td>
+                                <td class="color-c" style="font-size: 12px;">84-90</td>
+                                <td class="color-c" style="font-size: 12px;">87-93</td>
+                                <td class="color-c" style="font-size: 12px;">90-96</td>
+                                <td class="color-c" style="font-size: 12px;">93-99</td>
+                                <td class="color-c" style="font-size: 12px;">96-102</td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">78 - 82</td>
+                                <td class="color-b" style="font-size: 12px;">78 - 82</td>
                                 <td style="font-size: 12px;">36</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">89-95</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">92-98</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">95-101</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">98-104</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">101-107</td>
+                                <td class="color-c" style="font-size: 12px;">89-95</td>
+                                <td class="color-c" style="font-size: 12px;">92-98</td>
+                                <td class="color-c" style="font-size: 12px;">95-101</td>
+                                <td class="color-c" style="font-size: 12px;">98-104</td>
+                                <td class="color-c" style="font-size: 12px;">101-107</td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">83 - 87</td>
+                                <td class="color-b" style="font-size: 12px;">83 - 87</td>
                                 <td style="font-size: 12px;">38</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">94-100</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">97-103</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">100-106</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">103-109</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">106-112</td>
+                                <td class="color-c" style="font-size: 12px;">94-100</td>
+                                <td class="color-c" style="font-size: 12px;">97-103</td>
+                                <td class="color-c" style="font-size: 12px;">100-106</td>
+                                <td class="color-c" style="font-size: 12px;">103-109</td>
+                                <td class="color-c" style="font-size: 12px;">106-112</td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">88 - 92</td>
+                                <td class="color-b" style="font-size: 12px;">88 - 92</td>
                                 <td style="font-size: 12px;">40</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">99-105</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">102-108</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">105-111</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">108-114</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">111-117</td>
+                                <td class="color-c" style="font-size: 12px;">99-105</td>
+                                <td class="color-c" style="font-size: 12px;">102-108</td>
+                                <td class="color-c" style="font-size: 12px;">105-111</td>
+                                <td class="color-c" style="font-size: 12px;">108-114</td>
+                                <td class="color-c" style="font-size: 12px;">111-117</td>
                             </tr>
                             <tr>
-                               <td class="color-b" style="font-size: 12px; background-color: #efe5db;">93 - 97</td>
+                                <td class="color-b" style="font-size: 12px;">93 - 97</td>
                                 <td style="font-size: 12px;">42</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">104-110</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">107-113</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">110-116</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">113-119</td>
-                                <td class="color-c" style="font-size: 12px; background-color: #efeae4;">116-122</td>
+                                <td class="color-c" style="font-size: 12px;">104-110</td>
+                                <td class="color-c" style="font-size: 12px;">107-113</td>
+                                <td class="color-c" style="font-size: 12px;">110-116</td>
+                                <td class="color-c" style="font-size: 12px;">113-119</td>
+                                <td class="color-c" style="font-size: 12px;">116-122</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
-            <section class="u-spaceBottom5">
-                <h3 class="titularesH3New">Encuentra tu talla</h3>
+
+            <h3 class="titularesH3New">Encuentra tu talla</h3>
             <p>Encuentra la talla perfecta siguiendo estos pasos. Cuando te midas, usa un brasier cómodo sin relleno para obtener
             una medición precisa. Una vez que tengas tus medidas, utiliza la calculadora de tallas para averiguar cuál te quedará
             bien.</p>
-            <div><span class="u-spaceBottom3" style="display: block;">Calculadora de tallas: Elige las medidas en centímetros</span>
+            <div><span class="u-spaceBottom3" style="display: block;">Calculadora de tallas: Elige las medidas en pulgadas</span>
                 <div class="grid">
-                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
+                    <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
                             class="Input u-fullWidth u-spaceEnds checkBoxDiseno" id="control1-cm">
                             <option value="0">Base (cm)</option>
                             <option value="58">58</option>
@@ -637,7 +583,7 @@
                             <option value="107">107</option>
                         </select>
                     </div>
-                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
+                    <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
                             class="Input u-fullWidth u-spaceEnds checkBoxDiseno" disabled="disabled" id="control2-cm">
                             <option value="0">Busto (cm)</option>
                         </select></div>
@@ -653,44 +599,33 @@
                     </div>
                 </div>
             </div>
-            </section>
-            
-            <section>
-                <h3 class="titularesH3New">¿Cómo Medirte?</h3>
-                <div class="grid">
-                    <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
-                        <p><b>Paso 1: Base</b><br />Mide en centímetros el contorno de tu base, ubicando la cinta métrica justo debajo del busto
-                            rodeando tu torso.</p>
-                        <div class="u-textCenter"><img
-                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-base-busto_3f9574e5-5896-48f8-a132-064782c37954.png?v=1689785804"
-                                alt="Cómo medirte la banda" /></div>
-                    </div>
-                    <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
-                        <p><b>Paso 2: Busto</b><br />Mide en centímetros el contorno de tu busto, por la parte más sobresaliente.</p>
-                        <div class="u-textCenter"><img
-                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
-                                alt="Cómo medir el contorno del busto" /></div>
-                    </div>
+
+            <h3 class="titularesH3New">¿Cómo Medirte?</h3>
+            <div class="grid">
+                <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox">
+                    <p><b>Paso 1: Base</b><br />Mide en centímetros el contorno de tu base, ubicando la cinta métrica justo debajo del busto rodeando tu torso.</p>
+                    <div class="u-textCenter"><img
+                            src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-base-busto_3f9574e5-5896-48f8-a132-064782c37954.png?v=1689785804"
+                            alt="Cómo medirte la banda" /></div>
                 </div>
-                <div class="u-textCenter">
-                    <h3 class="titularesH3New u-spaceTop5">¿Dudas?</h3>
-                    <p><span>Comunícate a nuestra </span><strong>Línea de Atención al cliente <a
-                                href="tel:1-800-657-9107">1-800-657-9107</a></strong><span> y recibe asesoía de nuestras expertas.</span>
-                    </p>
+                <div class="grid__item small--one-whole medium-up--two-quarters">
+                    <p><b>Paso 2: Busto</b><br />Mide en centímetros el contorno de tu busto, por la parte más sobresaliente.</p><br>
+                    <div class="u-textCenter"><img
+                            src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
+                            alt="Cómo medir el contorno del busto" /></div>
                 </div>
-            </section>
+            </div>
+            <div class="u-textCenter">
+                <h3 class="titularesH3New u-spaceTop5">¿Dudas?</h3>
+                <p><span>Comunícate a nuestra </span><strong>Línea de Atención al cliente <a
+                        href="tel:1-800-657-9107">1-800-657-9107</a></strong><span> y recibe asesoía de nuestras expertas.</span></p>
+            </div>
         </div>
         <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
     </div>
-    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-sp-pul.js"></script>
-    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bras-sp-cm.js"></script>
     <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
-
-
-
-
-
-
-
-    
 </div>
+
+
+<script src="./js/js-tablas-bras-sp-pul.js"></script>
+<script src="./js/js-tablas-bras-sp-cm.js"></script>
