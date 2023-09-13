@@ -7,21 +7,74 @@
 <!--Fin llamado temporal de estilos -->
 
 <div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .table-wrapper::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-button:increment,
+        .table-wrapper::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .table-wrapper::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+
+
     <!-- COPIAR CONTENIDO DESDE AQUI -->
     <!-- Estilos quemados de reemplazo -->
     <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .custom-label #sizeguidemodal-content {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+
         .temporalContiene700 td,
         th {
             background: inherit;
         }
 
         #clearBarraTabla th {
-            background-color: white !important;
+            background-color: #f6f1e9 !important;
             color: black;
         }
 
         #contTable1 table td {
             border-bottom: 0px !important;
+            /* background: none !important; */
         }
 
         #contTable1 table tbody tr:nth-child(odd) {
@@ -76,12 +129,13 @@
             display: none;
         }
 
-        .label {
+        #contTable1 .label {
             display: inline-flex;
             align-items: center;
             cursor: pointer;
             color: #394a56;
             margin: 0 !important;
+            letter-spacing: 0 !important;
         }
 
         .label-text {
@@ -108,7 +162,7 @@
             width: 45%;
             background: #030303;
             border-radius: 15px;
-            transform: translate3d(108%, 0, 0);
+            transform: translate3d(121%, 0, 0);
         }
 
         .toggle-state:checked~.indicator {
@@ -123,7 +177,7 @@
             color: #030303;
         }
 
-        .cm {
+        .cms {
             position: absolute;
             top: 7px;
             right: 4px;
@@ -151,7 +205,7 @@
                     <input class="toggle-state" type="checkbox" name="check" value="check" />
                     <span class="in">IN</span>
                     <div class="indicator"></div>
-                    <span class="cm">CM</span>
+                    <span class="cms">CM</span>
                 </div>
             </label>
         </div>
@@ -162,96 +216,23 @@
                 <thead class="u-textWhite">
                     <tr id="clearBarraTabla">
                         <th style="width: 20%; vertical-align: middle;">
-                            Hips
+                            Size
                         </th>
                         <th style="width: 20%; vertical-align: middle;">
-                            Panty Size</th>
+                            Band</th>
                         <th style="width: 20%; vertical-align: middle;">
-                            Pants*</th>
+                            Bust</th>
                     </tr>
                 </thead>
                 <tbody id="padre">
                     <tr class="uno">
                         <td>
-                            32.5 - 34</td>
+                            One-size tops</td>
                         <td>
-                            <b>XXS</b></td>
+                            30 - 38</td>
                         <td>
-                            6</td>
+                            33 - 40.5</td>
                     </tr>
-                    <tr>
-                        <td>
-                            34.5 - 36.5</td>
-                        <td>
-                            <b>XS</b></td>
-                        <td>
-                            8</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            37 - 38</td>
-                        <td>
-                            <b>S</b></td>
-                        <td>
-                            10</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            38.5 - 40</td>
-                        <td>
-                            <b>M</b></td>
-                        <td>
-                            12</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            40.5 - 42</td>
-                        <td>
-                            <b>L</b></td>
-                        <td>
-                            14</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            42.5 - 44.5</td>
-                        <td>
-                            <b>XL</b></td>
-                        <td>
-                            16</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        45 - 47</td>
-                        <td>
-                            <b>2XL</b></td>
-                        <td>
-                            18</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        47 - 49</td>
-                        <td>
-                            <b>3XL</b></td>
-                        <td>
-                            20</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        50 - 51.5</td>
-                        <td>
-                            <b>4XL</b></td>
-                        <td>
-                            22</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        52 - 54</td>
-                        <td>
-                        <b>5XL</b></td>
-                        <td>
-                            24</td>
-                    </tr>
-
                 </tbody>
             </table>
         </div>
@@ -263,114 +244,56 @@
                 <thead class="u-textWhite">
                     <tr id="clearBarraTabla">
                         <th style="width: 20%; vertical-align: middle;">
-                            Hips
+                            Size
                         </th>
                         <th style="width: 20%; vertical-align: middle;">
-                            Panty Size</th>
+                            Band</th>
                         <th style="width: 20%; vertical-align: middle;">
-                            Pants*</th>
+                            Bust</th>
                     </tr>
                 </thead>
                 <tbody id="padre">
                     <tr class="uno">
                         <td>
-                            83 - 87</td>
+                            One-size tops</td>
                         <td>
-                            <b>XXS</b></td>
+                            68 - 88</td>
                         <td>
-                            2</td>
+                            83 - 103</td>
                     </tr>
-                    <tr>
-                        <td>
-                            88 - 92</td>
-                        <td>
-                            <b>XS</b></td>
-                        <td>
-                            4</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            93 - 97</td>
-                        <td>
-                            <b>S</b></td>
-                        <td>
-                            6</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            98 - 102</td>
-                        <td>
-                            <b>M</b></td>
-                        <td>
-                            8</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            103 - 107</td>
-                        <td>
-                            <b>L</b></td>
-                        <td>
-                            10</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            108 - 113</td>
-                        <td>
-                            <b>XL</b></td>
-                        <td>
-                            12</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            114 - 119</td>
-                        <td>
-                            <b>2XL</b></td>
-                        <td>
-                        14</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            120 - 125</td>
-                        <td>
-                            <b>3XL</b></td>
-                        <td>
-                            16</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            126 - 131</td>
-                        <td>
-                            <b>4XL</b></td>
-                        <td>
-                            18</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            132 - 137</td>
-                        <td>
-                            <b>5XL</b></td>
-                        <td>
-                            20</td>
-                    </tr>
-        
                 </tbody>
             </table>
         </div>
         <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
     </div>
-    <section id="footer-general">
+    <div class="u-boxSilver u-pad3 u-spaceBottom4">
+        <svg height="26" viewBox="0 0 26 26" width="26">
+            <path
+                d="M24.55,7.83A16.47,16.47,0,0,1,20.7,9.09V5.52a2.75,2.75,0,0,0,0-.52V5h0a3.72,3.72,0,0,0-.4-1.3C20.11,3.37,18.25.56,10.54.56h0C10.23.56,3.39.46.57,4.12a3.67,3.67,0,0,0-.5,2.06H0v12.1l.22.28c3.67,4.5,10.27,4.88,10.51,4.89.84.07,1.71.1,2.6.1A66.68,66.68,0,0,0,25.2,22.26l.8-.17v-15Zm-9.87,2a28.77,28.77,0,0,1-7.47-.4V8.11c1.33.55,4.84,1.59,10.18.38A6,6,0,0,0,18.7,8V9.45C16.51,9.79,14.72,9.87,14.67,9.88Zm-7.43-4c.85-.65,3.06-.92,4.74-1V7a10.93,10.93,0,0,1-4.47-1A1.48,1.48,0,0,1,7.25,5.9Zm-5-.69C4,3,8.47,2.56,10.31,2.56h.21c6.44,0,8,2.08,8,2.08h0a1.52,1.52,0,0,1,.16.47v.3a.69.69,0,0,1,0,.12,2.81,2.81,0,0,1-1.7,1A20.57,20.57,0,0,1,14,7V3l-1,0c-.52,0-5.08-.11-7.05,1.43A2.29,2.29,0,0,0,5.22,6h0V9a8,8,0,0,1-2-.89C1.61,6.73,2.08,5.53,2.25,5.21ZM2,17.56V9.64a13,13,0,0,0,5.42,1.92v9.23A13.42,13.42,0,0,1,3.65,19V14.58h-1v3.64A8.75,8.75,0,0,1,2,17.56Zm7.42,3.71V11.82a34.37,34.37,0,0,0,5.36.05,38.84,38.84,0,0,0,8.43-1.38V20.6c-1,.17-2.42.39-4,.58V17h-1v4.27c-1.37.14-2.84.24-4.29.26V17.13h-1v4.42c-.69,0-1.37,0-2-.09A13.45,13.45,0,0,1,9.42,21.27Z">
+            </path>
+        </svg> If your measurements fit within the range, you’ll be able to comfortably wear this one-size item. The one-size covers
+        sizes S to L.
+    </div>
+    <section id="footer-general u-spaceTop5">
         <h3 class="titularesH3New">Find your size</h3>
-        <p>To avoid altered measurements wear a fitted panty. If you don’t have a way to measure yourself, you can use your
-            pants*
-            size. Once you have your measurements, use the following chart to figure out what will fit you.</p>
+        <p>One-size items are made of super comfortable materials that are extremely flexible, designed adapt to a range of bodies.</p>
         
-        <h3 class="titularesH3New">How to measure</h3>
+        <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
         <div class="grid">
             <div class="grid__item u-spaceBottom2 u-md-space0">
-                <p>Measure around the fullest part of your hips. Locate your measurement on the table and find your panty size.
+                <p>To avoid altered measurements, wear an unpadded/lightly lined fitted bra.</p>
+                <b>Step 1: Band size</b>
+                <p>Measure in inches just under your arms and above your bust.
                 </p>
                 <div class="u-textCenter"><img
-                        src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/panty-size-cadera-leonisa-paso-unico_480x480_afb0bcd6-782b-4ff6-b14f-759a9f46e50d_480x480.jpg?v=1620393557"
+                        src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-banda-leonisa-paso1_pulg_480x480_up.png?v=1694478444"
+                        alt="How to measure" /></div>
+                <br>
+                <br>
+                <b>Step 2: Bust size</b>
+                <p>Measure in inches the fullest part of your bust.</p>
+                <div class="u-textCenter"><img
+                        src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
                         alt="How to measure" /></div>
             </div>
         </div>
@@ -381,8 +304,6 @@
                     to get expert advice.</span></p>
         </div>
     </section>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tabla-plana.js?v=1694528110"></script>
     <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
 </div>
-
-
-<script src="./js/js-tabla-plana.js"></script>

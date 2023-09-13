@@ -7,21 +7,69 @@
 <!--Fin llamado temporal de estilos -->
 
 <div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .table-wrapper::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-button:increment,
+        .table-wrapper::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .table-wrapper::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+
+
     <!-- COPIAR CONTENIDO DESDE AQUI -->
     <!-- Estilos quemados de reemplazo -->
     <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+
         .temporalContiene700 td,
         th {
             background: inherit;
         }
 
         #clearBarraTabla th {
-            background-color: white !important;
+            background-color: #f6f1e9 !important;
             color: black;
         }
 
         #contTable1 table td {
             border-bottom: 0px !important;
+            /* background: none !important; */
         }
 
         #contTable1 table tbody tr:nth-child(odd) {
@@ -76,12 +124,13 @@
             display: none;
         }
 
-        .label {
+        #contTable1 .label {
             display: inline-flex;
             align-items: center;
             cursor: pointer;
             color: #394a56;
             margin: 0 !important;
+            letter-spacing: 0 !important;
         }
 
         .label-text {
@@ -108,7 +157,7 @@
             width: 45%;
             background: #030303;
             border-radius: 15px;
-            transform: translate3d(108%, 0, 0);
+            transform: translate3d(121%, 0, 0);
         }
 
         .toggle-state:checked~.indicator {
@@ -123,7 +172,7 @@
             color: #030303;
         }
 
-        .cm {
+        .cms {
             position: absolute;
             top: 7px;
             right: 4px;
@@ -287,7 +336,7 @@
 
                 </tbody>
             </table>
-            <h3 class="titularesH3New">Find your size</h3>
+            <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
             <p>
                 Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
                 accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.
@@ -295,7 +344,7 @@
             <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in
                     inches</span>
                 <div class="grid">
-                    <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
                             class="Input u-fullWidth u-spaceEnds checkBoxDiseno" id="control1">
                             <option value="0">Band (in.)</option>
                             <option value="27">27</option>
@@ -319,7 +368,7 @@
                             <option value="45">45</option>
                             <option value="46">46</option>
                         </select></div>
-                    <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
                             class="Input u-fullWidth u-spaceEnds checkBoxDiseno" disabled="disabled" id="control2">
                             <option value="0">Bust (in.)</option>
                         </select></div>
@@ -334,24 +383,24 @@
                     </div>
                 </div>
             </div>
-            <h3 class="titularesH3New">How to measure</h3>
+            <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
             <div class="grid">
-                <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox">
+                <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
                     <p><b>Step 1: Band</b><br />Measure your band size by placing your measuring tape right under your
                         arms and over
                         the
                         bust.</p>
                     <div class="u-textCenter"><img
-                            src="https://cdn.shopify.com/s/files/1/0582/5223/0815/files/bra-size-banda-leonisa-paso1_pulg_480x480_2.jpg?v=1632951637"
+                            src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-banda-leonisa-paso1_pulg_480x480_up.png?v=1694478444"
                             alt="Cómo medirte la banda" /></div>
                 </div>
-                <div class="grid__item small--one-whole medium-up--two-quarters">
+                <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
                     <p><b>Step 2: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape
                         over the
                         fullest
                         part.</p>
                     <div class="u-textCenter"><img
-                            src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/bra-size-busto-leonisa-paso2_480x480.jpg?v=1620228545"
+                            src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
                             alt="Cómo medir el contorno del busto" /></div>
                 </div>
             </div>
@@ -496,7 +545,7 @@
                 </tbody>
             </table>
 
-            <h3 class="titularesH3New">Find your size</h3>
+            <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
             <p>
                 Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
                 accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.
@@ -504,7 +553,7 @@
             <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in
                     centimeters</span>
                 <div class="grid">
-                    <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
                             class="Input u-fullWidth u-spaceEnds checkBoxDiseno" id="control1-cm">
                             <option value="0">Under Band (cm)</option>
                             <option value="58">58</option>
@@ -559,7 +608,7 @@
                             <option value="107">107</option>
                         </select>
                     </div>
-                    <div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2"><select
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2"><select
                             class="Input u-fullWidth u-spaceEnds checkBoxDiseno" disabled="disabled" id="control2-cm">
                             <option value="0">Bust (cm)</option>
                         </select></div>
@@ -576,19 +625,19 @@
                 </div>
             </div>
 
-            <h3 class="titularesH3New">How to measure</h3>
+            <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
             <div class="grid">
-                <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox">
+                <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
                     <p><b>Step 1: Under Band</b><br />Measure your under band size, by placing the measuring tape just below the bust around your torso.</p>
                     <div class="u-textCenter"><img
-                            src="https://res.cloudinary.com/leonisa/image/upload/v1541523205/assets/1/7/bra-size-base-leonisa-paso1.jpg"
+                            src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-banda-leonisa-paso1_pulg_480x480_up.png?v=1694478444"
                             alt="Cómo medirte la banda" /></div>
                 </div>
-                <div class="grid__item small--one-whole medium-up--two-quarters">
+                <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
                     <p><b>Step 2: Bust</b><br />Measure the contour of your bust in centimeters by placing a measuring tape
                         over the fullest part.</p>
                     <div class="u-textCenter"><img
-                            src="https://cdn.shopify.com/s/files/1/0565/5219/4206/files/bra-size-busto-leonisa-paso2_480x480.jpg?v=1620228545"
+                            src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
                             alt="Cómo medir el contorno del busto" /></div>
                 </div>
             </div>
@@ -601,9 +650,7 @@
         </div>
         <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
     </div>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bralettes-011967-en-pul.js"></script>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-bralettes-011967-en-cm.js"></script>
     <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
 </div>
-
-
-<script src="./js/js-tablas-bralettes-011967-en-pul.js"></script>
-<script src="./js/js-tablas-bralettes-011967-en-cm.js"></script>

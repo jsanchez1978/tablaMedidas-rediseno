@@ -1,0 +1,78 @@
+/* CSS root */
+:root {
+    --typeHeaderPrimary: "Neue Haas Unica";
+    --typeHeaderFallback: sans-serif;
+    --typeHeaderSize: 28px;
+    --typeHeaderWeight: 500;
+    --typeHeaderLineHeight: 1;
+    --typeHeaderSpacing: 0.0em;
+    --typeBasePrimary: Helvetica;
+    --typeBaseFallback: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    --typeBaseSize: 16px;
+    --typeBaseWeight: 400;
+    --typeBaseSpacing: 0.025em;
+    --typeBaseLineHeight: 1.2;
+    --typeCollectionTitle: 18px;
+    --iconWeight: 4px;
+    --iconLinecaps: miter;
+    --buttonRadius: 3px;
+    --colorGridOverlayOpacity: 0.14;
+    --colorBtnPrimary: #2c2a29;
+    --colorBtnPrimaryLight: #464342;
+    --colorBtnPrimaryDim: #1f1d1d;
+    --colorBtnPrimaryText: #ffffff;
+    --colorBtnAction: #99cc5c;
+    --colorBtnActionLight: #b1d883;
+    --colorBtnActionDim: #8dc649;
+    --colorBtnActionText: #2c2a29;
+    --colorCartDot: #0197a1;
+    --colorLink: #2c2a29;
+    --colorTextBody: #2c2a29;
+    --colorPrice: #2c2a29;
+    --colorTextSavings: #d73043;
+    --colorSaleTag: #d73043;
+    --colorSaleTagText: #ffffff;
+    --colorNewTag: #2c2a29;
+    --colorNewTagText: #ffffff;
+    --colorBestTag: #fffff5;
+    --colorBestTagText: #2c2a29;
+    --colorBody: #ffffff;
+    --colorBodyDim: #f2f2f2;
+    --colorFooter: #ffffff;
+    --colorFooterText: #2c2a29;
+    --colorBorder: #bbbbbb;
+    --colorNav: #ffffff;
+    --colorNavText: #2c2a29;
+    --colorAnnouncement: #2c2a29;
+    --colorAnnouncementText: #ffffff;
+    --colorHeroText: #ffffff;
+    --colorModalBg: #2c2a29;
+    --colorImageOverlay: #2c2a29;
+    --colorImageOverlayOpacity: .1;
+    --colorImageOverlayTextShadow: .2;
+    --colorSmallImageBg: #ffffff;
+    --colorLargeImageBg: #2c2a29;
+    --colorGridOverlay: #2c2a29;
+    --colorGridOverlayOpacity: .1;
+    --colorDrawers: #ffffff;
+    --colorDrawersDim: #f2f2f2;
+    --colorDrawerBorder: #bbbbbb;
+    --colorDrawerText: #2c2a29;
+    --colorDrawerTextDark: #040404;
+    --colorDrawerButton: #99cc5c;
+    --colorDrawerButtonText: #2c2a29;
+    --colorFilterButton: #f5f5f5;
+    --colorFilterButtonText: #2c2a29;
+    --colorFilterButtonHov: #cccccc;
+    --grid-gutter: 17px;
+    --drawer-gutter: 20px;
+    --color-body-text: #2c2a29;
+}
+
+
+
+
+.temporalContiene700 {
+    max-width: 700px;
+    margin: 0 auto;
+}
