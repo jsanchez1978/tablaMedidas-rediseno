@@ -1,0 +1,405 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- llamado temporal de estilos -->
+<link rel="stylesheet" href="./css/style-temp.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/theme.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/leonisa.css">
+<script type="text/javascript" src="./js/jquery-3.6.3.min.js"></script>
+<!--Fin llamado temporal de estilos -->
+
+<div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .table-wrapper::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-button:increment,
+        .table-wrapper::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .table-wrapper::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+
+
+    <!-- COPIAR CONTENIDO DESDE AQUI -->
+    <!-- Estilos quemados de reemplazo -->
+    <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .custom-label #sizeguidemodal-content {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+
+        .temporalContiene700 td,
+        th {
+            background: inherit;
+        }
+
+        #clearBarraTabla th {
+            background-color: #f6f1e9 !important;
+            color: black;
+        }
+
+        #contTable1 table td {
+            border-bottom: 0px !important;
+            /* background: none !important; */
+        }
+
+        #contTable1 table tbody tr:nth-child(odd) {
+            background-color: #f8f5ee !important;
+        }
+
+        #contTable1 table tbody tr:nth-child(even) {
+            background-color: #ffffff !important;
+        }
+
+        .titularesH3New {
+            color: #030303;
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .spaceClear {
+            margin: 0 !important;
+        }
+
+        .checkBoxDiseno {
+            border-radius: 30px;
+            text-align: center;
+            border-color: #f5ece3;
+            background-color: #f8f5ee;
+            padding: 12px 10px;
+        }
+
+        .checkBoxDiseno:active {
+            border-color: #f4d5b6 !important;
+        }
+
+        .checkBoxDiseno:focus {
+            border-color: #f4d5b6 !important;
+        }
+
+        .boderIzqBox {
+            border-right: 2px solid #eeeae0;
+        }
+
+        /* Toggle style */
+        .contToggleBox {
+            display: flex;
+            align-items: center;
+        }
+
+        .tableActive {
+            display: block;
+        }
+
+        .tableOff {
+            display: none;
+        }
+
+        #contTable1 .label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #394a56;
+            margin: 0 !important;
+            letter-spacing: 0 !important;
+        }
+
+        .label-text {
+            margin-left: 9px;
+        }
+
+        .toggle {
+            isolation: isolate;
+            position: relative;
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: solid 2px #f6f0e9;
+        }
+
+        .toggle-state {
+            display: none;
+        }
+
+        .indicator {
+            border: 3px solid white;
+            height: 100%;
+            width: 45%;
+            background: #030303;
+            border-radius: 15px;
+            transform: translate3d(121%, 0, 0);
+        }
+
+        .toggle-state:checked~.indicator {
+            transform: translate3d(5%, 0, 0);
+        }
+
+        .in {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            font-size: 11px;
+            color: #030303;
+        }
+
+        .cms {
+            position: absolute;
+            top: 7px;
+            right: 4px;
+            font-size: 11px;
+            color: #030303;
+        }
+
+        /* Fin Toggle style */
+
+
+        @media only screen and (max-width: 600px) {
+            .boderIzqBox {
+                border: none;
+            }
+        }
+    </style>
+    <!-- Fin Estilos quemados de reemplazo -->
+    <!-- Seccion tabla -->
+    <div id="contTable1" class="u-pad u-spaceTop5">
+        <!-- tooggle swicht close -->
+        <div class="contToggleBox u-spaceBottom4">
+            <h3 class="titularesH3New spaceClear u-padRight2">Size Guide</h3>
+            <label class="label">
+                <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <span class="in">IN</span>
+                    <div class="indicator"></div>
+                    <span class="cms">CM</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-inches" class="tableActive">
+            <table id="tablaNew" class="u-textCenter" style="font-size: 15px !important;">
+                <thead class="u-textWhite">
+                    <tr id="clearBarraTabla">
+                        <th style="width: 20%; vertical-align: middle;">
+                            Size
+                        </th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            Shoulders</th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            Bicep</th>
+                    </tr>
+                </thead>
+                <tbody id="padre">
+                    <tr class="uno">
+                        <td>
+                            XS</td>
+                        <td>
+                            14-15</td>
+                        <td>
+                            10-11</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            S</td>
+                        <td>
+                            15.5-16</td>
+                        <td>
+                            11.5-12</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            M</td>
+                        <td>
+                            15.5-16</td>
+                        <td>
+                            11.5-12</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            L</td>
+                        <td>
+                            16.5-17.5</td>
+                        <td>
+                            12.5-13.5</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            XL</td>
+                        <td>
+                            16.5-17.5</td>
+                        <td>
+                            12.5-13.5</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            2XL</td>
+                        <td>
+                            16.5-17.5</td>
+                        <td>
+                            12.5-13.5</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            3XL</td>
+                        <td>
+                            18-19</td>
+                        <td>
+                            14-15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+
+        <!-- CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-cms" class="tableOff">
+            <table id="tablaNew" class="u-textCenter" style="font-size: 15px !important;">
+                <thead class="u-textWhite">
+                    <tr id="clearBarraTabla">
+                        <th style="width: 20%; vertical-align: middle;">
+                            Size
+                        </th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            Shoulders</th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            Bicep</th>
+                    </tr>
+                </thead>
+                <tbody id="padre">
+                    <tr class="uno">
+                        <td>
+                            XS</td>
+                        <td>
+                            36-38</td>
+                        <td>
+                            26-28</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            S</td>
+                        <td>
+                            39-41</td>
+                        <td>
+                            29-31</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            M</td>
+                        <td>
+                            39-41</td>
+                        <td>
+                            29-31</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            L</td>
+                        <td>
+                            42-45</td>
+                        <td>
+                            32-35</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            XL</td>
+                        <td>
+                            42-45</td>
+                        <td>
+                            32-35</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            2XL</td>
+                        <td>
+                            42-45</td>
+                        <td>
+                            32-35</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            3XL</td>
+                        <td>
+                            46-48</td>
+                        <td>
+                            36-38</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+    </div>
+    <section id="footer-general">
+        <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
+        <p>Find the perfect size for arm shapers. Once you have your measurements, use the following chart to figure out what will
+        fit you.</p>
+        
+        <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
+        <div class="grid">
+            <p class="grid__item u-spaceBottom3">Keep in mind that shapers are compression garments that are designed to slim your figure, it's important to follow our
+            measuring steps.</p>
+            <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                <p><b>Step 1: Shoulders</b><br />Measure the width of your back in inches, placing the measuring tape from shoulder to shoulder across the most prominent
+                part.</p>
+                <div class="u-textCenter"><img
+                        src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/hombros-1.png?v=1694794741"
+                        alt="Cómo medirte la banda" /></div>
+            </div>
+            <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                <p><b>Step 2: Arms</b><br />Measure the contour of your bicep in inches, placing the measuring tape around your arm as shown.</p>
+                <div class="u-textCenter"><img
+                        src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/hombros-2.png?v=1694794741"
+                        alt="Cómo medir el contorno del busto" /></div>
+            </div>
+        </div>
+        <br>
+
+        <div class="u-textCenter">
+            <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+            <p><span>Call our Customer Service </span><strong>Line at <a
+                        href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                    to get expert advice.</span></p>
+        </div>
+    </section>
+    
+
+
+
+<script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tabla-plana.js?v=1694528110"></script>
+<!-- FIN COPIAR CONTENIDO DESDE AQUI -->
+
+
+</div>

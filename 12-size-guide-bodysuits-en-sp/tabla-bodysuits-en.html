@@ -7,21 +7,74 @@
 <!--Fin llamado temporal de estilos -->
 
 <div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .table-wrapper::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-button:increment,
+        .table-wrapper::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .table-wrapper::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+
+
     <!-- COPIAR CONTENIDO DESDE AQUI -->
     <!-- Estilos quemados de reemplazo -->
     <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .custom-label #sizeguidemodal-content {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+
         .temporalContiene700 td,
         th {
             background: inherit;
         }
 
         #clearBarraTabla th {
-            background-color: white !important;
+            background-color: #f6f1e9 !important;
             color: black;
         }
 
         #contTable1 table td {
             border-bottom: 0px !important;
+            /* background: none !important; */
         }
 
         #contTable1 table tbody tr:nth-child(odd) {
@@ -76,12 +129,13 @@
             display: none;
         }
 
-        .label {
+        #contTable1 .label {
             display: inline-flex;
             align-items: center;
             cursor: pointer;
             color: #394a56;
             margin: 0 !important;
+            letter-spacing: 0 !important;
         }
 
         .label-text {
@@ -105,10 +159,10 @@
         .indicator {
             border: 3px solid white;
             height: 100%;
-            width: 49%;
+            width: 45%;
             background: #030303;
             border-radius: 15px;
-            transform: translate3d(108%, 0, 0);
+            transform: translate3d(121%, 0, 0);
         }
 
         .toggle-state:checked~.indicator {
@@ -119,15 +173,15 @@
             position: absolute;
             top: 7px;
             left: 7px;
-            font-size: 9px;
+            font-size: 11px;
             color: #030303;
         }
 
-        .cm {
+        .cms {
             position: absolute;
             top: 7px;
             right: 4px;
-            font-size: 9px;
+            font-size: 11px;
             color: #030303;
         }
 
@@ -145,13 +199,13 @@
     <div id="contTable1" class="u-pad u-spaceTop5">
         <!-- tooggle swicht close -->
         <div class="contToggleBox u-spaceBottom4">
-            <h3 class="titularesH3New spaceClear u-padRight2">Guia de tallas</h3>
+            <h3 class="titularesH3New spaceClear u-padRight2">Size Guide</h3>
             <label class="label">
                 <div class="toggle">
                     <input class="toggle-state" type="checkbox" name="check" value="check" />
-                    <span class="in">PUL</span>
+                    <span class="in">IN</span>
                     <div class="indicator"></div>
-                    <span class="cm">CM</span>
+                    <span class="cms">CM</span>
                 </div>
             </label>
         </div>
@@ -163,14 +217,14 @@
                     <thead class="u-textWhite">
                         <tr id="clearBarraTabla">
                             <th style="width: 20%; vertical-align: middle;">
-                                Talla
+                                Size
                             </th>
                             <th style="width: 20%; vertical-align: middle;">
-                                Busto</th>
+                                Bust</th>
                             <th style="width: 20%; vertical-align: middle;">
-                                Cadera</th>
+                                Hips</th>
                             <th style="width: 20%; vertical-align: middle;">
-                                vestido/pantalón*</th>
+                                Dress/pants*</th>
                         </tr>
                     </thead>
                     <tbody id="padre">
@@ -287,14 +341,14 @@
                     <thead class="u-textWhite">
                         <tr id="clearBarraTabla">
                             <th style="width: 20%; vertical-align: middle;">
-                                Talla
+                                Size
                             </th>
                             <th style="width: 20%; vertical-align: middle;">
-                                Busto</th>
+                                Bust</th>
                             <th style="width: 20%; vertical-align: middle;">
-                                Cadera</th>
+                                Hips</th>
                             <th style="width: 20%; vertical-align: middle;">
-                                vestido/pantalón*</th>
+                                Dress/pants*</th>
                         </tr>
                     </thead>
                     <tbody id="padre">
@@ -405,37 +459,35 @@
         <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
     </div>
     <section id="footer-general">
-        <h3 class="titularesH3New">Encuentra tu talla</h3>
-        <p>Encuentra la talla perfecta siguiendo estos pasos. Al medirte, usa un top cómodo sin relleno para obtener una medición
-        precisa. Una vez que tengas tus medidas, utiliza la siguiente tabla para saber qué talla te quedará bien. Si no tienes
-        forma de medirte, puedes utilizar tu talla de vestido y pantalón*.</p>
+        <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
+        <p>When measuring yourself, wear a comfy bra without padding for an accurate measurement. Once you have your measurements,
+        use the following chart to figure out what will fit you. If you don’t have a way to measure yourself, you can use your
+        dress & pants* size.</p>
         
-        <h3 class="titularesH3New">¿Cómo medirte?</h3>
-        <p>Ten en cuenta que las fajas son prendas de compresión diseñadas para estilizar tu figura, por lo que es importante que
-        sigas nuestros pasos de medición.</p>
+        <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
+        <p>Keep in mind that shapers are compression garments that are designed to slim your figure, it's important to follow our
+        measuring steps.</p>
         <div class="grid">
-            <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox">
-                <p style="padding-right: 5px;"><b>Paso 1: Busto</b><br />Mide en pulgadas el contorno de tu pecho ubicando la cinta métrica sobre la parte con más volumen.</p>
+            <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                <p style="padding-right: 5px;"><b>Step 1: Bust</b><br />Measure your bust size in inches by wrapping the measuring tape around the part that sticks out the most.</p>
                 <div class="u-textCenter"><img
                         src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto-body.png?v=1689191382"
                         alt="Cómo medirte la banda" /></div>
             </div>
-            <div class="grid__item small--one-whole medium-up--two-quarters">
-                <p><b>Paso 2: Cadera</b><br />Mide el contorno de tus caderas enrollando la cinta métrica alrededor de la parte más ancha.</p>
+            <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                <p><b>Step 2: Hips</b><br />Measure your waist in inches by wrapping the measuring tape around the part that sticks out the most.</p>
                 <div class="u-textCenter"><img
                         src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-cadera-body.png?v=1689191384"
                         alt="Cómo medir el contorno del busto" /></div>
             </div>
         </div>
-        <div class="u-textCenter">
-            <h3 class="titularesH3New u-spaceTop5">¿Dudas?</h3>
-            <p><span>Comunícate a nuestra </span><strong>Línea de Atención al cliente <a
+        <div class="u-textCenter u-spaceTop5">
+            <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+            <p><span>Call our Customer Service </span><strong>Line at <a
                         href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
-                    y recibe asesoría de nuestras expertas.</span></p>
+                    to get expert advice.</span></p>
         </div>
     </section>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tabla-plana.js?v=1694528110"></script>
     <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
 </div>
-
-
-<script src="./js/js-tabla-plana.js"></script>

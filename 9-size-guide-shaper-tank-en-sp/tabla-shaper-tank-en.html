@@ -1,0 +1,443 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- llamado temporal de estilos -->
+<link rel="stylesheet" href="./css/style-temp.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/theme.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/leonisa.css">
+<script type="text/javascript" src="./js/jquery-3.6.3.min.js"></script>
+<!--Fin llamado temporal de estilos -->
+
+<div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .table-wrapper::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-button:increment,
+        .table-wrapper::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .table-wrapper::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+
+
+    <!-- COPIAR CONTENIDO DESDE AQUI -->
+    <!-- Estilos quemados de reemplazo -->
+    <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .custom-label #sizeguidemodal-content {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+
+        .temporalContiene700 td,
+        th {
+            background: inherit;
+        }
+
+        #clearBarraTabla th {
+            background-color: #f6f1e9 !important;
+            color: black;
+        }
+
+        #contTable1 table td {
+            border-bottom: 0px !important;
+            /* background: none !important; */
+        }
+
+        #contTable1 table tbody tr:nth-child(odd) {
+            background-color: #f8f5ee !important;
+        }
+
+        #contTable1 table tbody tr:nth-child(even) {
+            background-color: #ffffff !important;
+        }
+
+        .titularesH3New {
+            color: #030303;
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .spaceClear {
+            margin: 0 !important;
+        }
+
+        .checkBoxDiseno {
+            border-radius: 30px;
+            text-align: center;
+            border-color: #f5ece3;
+            background-color: #f8f5ee;
+            padding: 12px 10px;
+        }
+
+        .checkBoxDiseno:active {
+            border-color: #f4d5b6 !important;
+        }
+
+        .checkBoxDiseno:focus {
+            border-color: #f4d5b6 !important;
+        }
+
+        .boderIzqBox {
+            border-right: 2px solid #eeeae0;
+        }
+
+        /* Toggle style */
+        .contToggleBox {
+            display: flex;
+            align-items: center;
+        }
+
+        .tableActive {
+            display: block;
+        }
+
+        .tableOff {
+            display: none;
+        }
+
+        #contTable1 .label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #394a56;
+            margin: 0 !important;
+            letter-spacing: 0 !important;
+        }
+
+        .label-text {
+            margin-left: 9px;
+        }
+
+        .toggle {
+            isolation: isolate;
+            position: relative;
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: solid 2px #f6f0e9;
+        }
+
+        .toggle-state {
+            display: none;
+        }
+
+        .indicator {
+            border: 3px solid white;
+            height: 100%;
+            width: 45%;
+            background: #030303;
+            border-radius: 15px;
+            transform: translate3d(121%, 0, 0);
+        }
+
+        .toggle-state:checked~.indicator {
+            transform: translate3d(5%, 0, 0);
+        }
+
+        .in {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            font-size: 11px;
+            color: #030303;
+        }
+
+        .cms {
+            position: absolute;
+            top: 7px;
+            right: 4px;
+            font-size: 11px;
+            color: #030303;
+        }
+
+        /* Fin Toggle style */
+
+
+        @media only screen and (max-width: 600px) {
+            .boderIzqBox {
+                border: none;
+            }
+        }
+    </style>
+    <!-- Fin Estilos quemados de reemplazo -->
+    <!-- Seccion tabla -->
+    <div id="contTable1" class="u-pad u-spaceTop5">
+        <!-- tooggle swicht close -->
+        <div class="contToggleBox u-spaceBottom4">
+            <h3 class="titularesH3New spaceClear u-padRight2">Size Guide</h3>
+            <label class="label">
+                <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <span class="in">IN</span>
+                    <div class="indicator"></div>
+                    <span class="cms">CM</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-inches" class="tableActive">
+            <table id="tablaNew" class="u-textCenter" style="font-size: 15px !important;">
+                <thead class="u-textWhite">
+                    <tr id="clearBarraTabla">
+                        <th style="width: 20%; vertical-align: middle;">
+                            Size
+                        </th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            Bust</th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            tops & shirts*</th>
+                    </tr>
+                </thead>
+                <tbody id="padre">
+                    <tr class="uno">
+                        <td>
+                            XXS</td>
+                        <td>
+                            30.5-32.5</td>
+                        <td>
+                            000-0</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            XS</td>
+                        <td>
+                            33-34</td>
+                        <td>
+                            0-2</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            S</td>
+                        <td>
+                            34.5-36</td>
+                        <td>
+                            4-6</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            M</td>
+                        <td>
+                            36.5-38</td>
+                        <td>
+                            8-10</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            L</td>
+                        <td>
+                            38.5-40</td>
+                        <td>
+                            10-12</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            XL</td>
+                        <td>
+                            40.5-42.5</td>
+                        <td>
+                            14-16</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            2XL</td>
+                        <td>
+                            43-45</td>
+                        <td>
+                            16-18</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            3XL</td>
+                        <td>
+                            45.5-47</td>
+                        <td>
+                            18-20</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            4XL</td>
+                        <td>
+                            47.5-49.5</td>
+                        <td>
+                            20-22</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            5XL</td>
+                        <td>
+                            50-52</td>
+                        <td>
+                            22-24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+
+        <!-- CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-cms" class="tableOff">
+            <table id="tablaNew" class="u-textCenter" style="font-size: 15px !important;">
+                <thead class="u-textWhite">
+                    <tr id="clearBarraTabla">
+                        <th style="width: 20%; vertical-align: middle;">
+                            Size
+                        </th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            Bust</th>
+                        <th style="width: 20%; vertical-align: middle;">
+                            tops & shirts*</th>
+                    </tr>
+                </thead>
+                <tbody id="padre">
+                    <tr class="uno">
+                        <td>
+                            XXS</td>
+                        <td>
+                            78-82</td>
+                        <td>
+                            2</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            XS</td>
+                        <td>
+                            83-87</td>
+                        <td>
+                            4</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            S</td>
+                        <td>
+                            88-92</td>
+                        <td>
+                            6</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            M</td>
+                        <td>
+                            93-97</td>
+                        <td>
+                            8</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            L</td>
+                        <td>
+                            98-102</td>
+                        <td>
+                            10</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            XL</td>
+                        <td>
+                            103-108</td>
+                        <td>
+                            12</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            2XL</td>
+                        <td>
+                            109-114</td>
+                        <td>
+                            14</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            3XL</td>
+                        <td>
+                            115-120</td>
+                        <td>
+                            16</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            4XL</td>
+                        <td>
+                            121-126</td>
+                        <td>
+                            18</td>
+                    </tr>
+                    <tr class="uno">
+                        <td>
+                            5XL</td>
+                        <td>
+                            127-132</td>
+                        <td>
+                            20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+    </div>
+    <section id="footer-general">
+        <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
+        <p>Find the perfect size for shaper tanks. Once you have your measurements, use the following chart to figure out what will
+        fit you. If you don’t have a way to measure yourself, you can use your tops & shirts* size.</p>
+        
+        <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
+        <p>Keep in mind that shapers are compression garments that are designed to slim your figure, it's important to follow our
+        measuring steps.</p>
+        <div class="grid">
+            <div class="grid__item small--one-whole u-spaceBottom2 u-md-space0">
+                <p><b>Bust</b><br />Measure your bust size in inches by wrapping the measuring tape around the part that sticks out the most.</p>
+                <div class="u-textCenter"><img
+                        src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-band-usa-leonisa-ok.png?v=1694790614"
+                        alt="Cómo medirte la banda" /></div>
+            </div>
+        </div>
+        <div class="u-spaceTop5">
+            <p><b>If you like tight clothing or more control, buy the smaller size.</b></p>
+            <p><b>If you like them wider or with less control, buy the larger size.</b></p>
+        </div>
+        
+        <div class="u-textCenter">
+            <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+            <p><span>Call our Customer Service </span><strong>Line at <a
+                        href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                    to get expert advice.</span></p>
+        </div>
+    </section>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tabla-plana.js?v=1694528110"></script>
+    <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
+</div>
