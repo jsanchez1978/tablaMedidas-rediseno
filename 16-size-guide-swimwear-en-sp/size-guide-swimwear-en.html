@@ -1,0 +1,374 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- llamado temporal de estilos -->
+<link rel="stylesheet" href="./css/style-temp.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/theme.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/leonisa.css">
+<script type="text/javascript" src="./js/jquery-3.6.3.min.js"></script>
+<!--Fin llamado temporal de estilos -->
+
+
+
+
+
+
+
+<div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.table-wrapper::-webkit-scrollbar-button:increment,.table-wrapper::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.table-wrapper::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+</style>
+
+
+
+
+
+    <!-- COPIAR CONTENIDO DESDE AQUI -->
+    <!-- Estilos quemados de reemplazo -->
+    <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+        .temporalContiene700 td,
+        th {
+            background: inherit;
+        }
+    
+        #clearBarraTabla th {
+            background-color: #f6f1e9 !important;
+            color: black;
+        }
+    
+        #contTable1 table td {
+            border-bottom: 0px !important;
+            /* background: none !important; */
+        }
+    
+        #contTable1 table tbody tr:nth-child(odd) {
+            background-color: #f8f5ee !important;
+        }
+    
+        #contTable1 table tbody tr:nth-child(even) {
+            background-color: #ffffff !important;
+        }
+    
+        .titularesH3New {
+            color: #030303;
+            font-size: 19px;
+            font-weight: 600;
+        }
+    
+        .spaceClear {
+            margin: 0 !important;
+        }
+    
+        .checkBoxDiseno {
+            border-radius: 30px;
+            text-align: center;
+            border-color: #f5ece3;
+            background-color: #f8f5ee;
+            padding: 12px 10px;
+        }
+    
+        .checkBoxDiseno:active {
+            border-color: #f4d5b6 !important;
+        }
+    
+        .checkBoxDiseno:focus {
+            border-color: #f4d5b6 !important;
+        }
+    
+        .boderIzqBox {
+            border-right: 2px solid #eeeae0;
+        }
+    
+        /* Toggle style */
+        .contToggleBox {
+            display: flex;
+            align-items: center;
+        }
+    
+        .tableActive {
+            display: block;
+        }
+    
+        .tableOff {
+            display: none;
+        }
+    
+        #contTable1 .label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #394a56;
+            margin: 0 !important;
+            letter-spacing: 0 !important;
+        }
+    
+        .label-text {
+            margin-left: 9px;
+        }
+    
+        .toggle {
+            isolation: isolate;
+            position: relative;
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: solid 2px #f6f0e9;
+        }
+    
+        .toggle-state {
+            display: none;
+        }
+    
+        .indicator {
+            border: 3px solid white;
+            height: 100%;
+            width: 45%;
+            background: #030303;
+            border-radius: 15px;
+            transform: translate3d(121%, 0, 0);
+        }
+    
+        .toggle-state:checked~.indicator {
+            transform: translate3d(5%, 0, 0);
+        }
+    
+        .in {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            font-size: 11px;
+            color: #030303;
+        }
+    
+        .cms {
+            position: absolute;
+            top: 7px;
+            right: 4px;
+            font-size: 11px;
+            color: #030303;
+        }
+    
+        /* Fin Toggle style */
+    
+    
+        @media only screen and (max-width: 600px) {
+            .boderIzqBox {
+                border: none;
+            }
+        }
+    </style>
+    <!-- Fin Estilos quemados de reemplazo -->
+    <!-- Seccion tabla -->
+    <div id="contTable1" class="u-pad u-spaceTop5">
+        <!-- tooggle swicht close -->
+        <div class="contToggleBox u-spaceBottom4">
+            <h3 class="titularesH3New spaceClear u-padRight2">Find your size</h3>
+            <label class="label">
+                <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <span class="in">IN</span>
+                    <div class="indicator"></div>
+                    <span class="cms">CM</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-inches" class="tableActive">
+            <section>
+                <h3 class="titularesH3New">Find your size</h3>
+                <p>Find the perfect size for your swimwear. Once you have your measurements, use the size calculator to figure out what
+                will fit you. If you are deciding between two sizes we recommend that you select the larger size.</p>
+                <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in
+                        inches</span>
+                    <div class="grid">
+                        <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                            <select
+                                class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                                data-collapsible-target="promo-details-1" id="control1" onchange="habi()">
+                                <option value="">BUST</option>
+                                <option value="0">30.5-32.5</option>
+                                <option value="1">33-34</option>
+                                <option value="2">34.5-36</option>
+                                <option value="3">36.5-38</option>
+                                <option value="4">38.5-40</option>
+                                <option value="5">40.5-42.5</option>
+                                <option value="6">43-45</option>
+                                <option value="7">45.5-47</option>
+                                <option value="8">47.5-49.5</option>
+                                <option value="9">50-52</option>
+                            </select></div>
+                        <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                            <select
+                                class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                                data-collapsible-target="promo-details-1" disabled="disabled" id="control2">
+                                <option value="">HIPS</option>
+                                <option value="0">32.5-34</option>
+                                <option value="1">34.5-36.5</option>
+                                <option value="2">37-38</option>
+                                <option value="3">38.5-40</option>
+                                <option value="4">40.5-42</option>
+                                <option value="5">42.4-44.5</option>
+                                <option value="6">45-47</option>
+                                <option value="7">47-49</option>
+                                <option value="8">50-51.5</option>
+                                <option value="9">52-54</option>
+                            </select></div>
+                        <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta">
+                            <div class="tituloRespuesta">YOUR SIZE</div>
+                            <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
+                                    id="detalleRespuesta"> </b></header>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="u-spaceTop5">
+                <h3 class="titularesH3New">How to measure</h3>
+                <div class="grid">
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                        <p><b>Step 1: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape over the fullest part.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-band-banio.png?v=1695993814"
+                                alt="Cómo medirte la banda" /></div>
+                    </div>
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                        <p><b>Step 2: Hips</b><br />Measure the contour of your hips by wrapping your measuring tape around the widest part.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-cadera-body.png?v=1689191384"
+                                alt="Cómo medir el contorno del busto" /></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="u-textCenter">
+                    <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+                    <p><span>Call our Customer Service </span><strong>Line at <a
+                                href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                            to get expert advice.</span></p>
+                </div>
+            </section>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+
+        <!-- CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-cms" class="tableOff">
+            <section class="u-spaceBottom5">
+                <h3 class="titularesH3New">Find your size</h3>
+            <p>Find the perfect size for your swimwear. Once you have your measurements, use the size calculator to figure out what
+            will fit you. If you are deciding between two sizes we recommend that you select the larger size.</p>
+            <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in
+                    centimeters</span>
+                <div class="grid">
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                        <select class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                            data-collapsible-target="promo-details-1" id="control3" onchange="habi2()">
+                            <option value="">BUST</option>
+                            <option value="0">78-82</option>
+                            <option value="1">83-87</option>
+                            <option value="2">88-92</option>
+                            <option value="3">93-97</option>
+                            <option value="4">98-102</option>
+                            <option value="5">103-108</option>
+                            <option value="6">109-114</option>
+                            <option value="7">115-120</option>
+                            <option value="8">121-126</option>
+                            <option value="9">127-132</option>
+                        </select>
+                    </div>
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                        <select class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                            data-collapsible-target="promo-details-1" disabled="disabled" id="control4">
+                            <option value="">HIPS</option>
+                            <option value="0">83-87</option>
+                            <option value="1">88-92</option>
+                            <option value="2">93-97</option>
+                            <option value="3">98-102</option>
+                            <option value="4">103-107</option>
+                            <option value="5">108-113</option>
+                            <option value="6">114-119</option>
+                            <option value="7">120-125</option>
+                            <option value="8">126-131</option>
+                            <option value="9">132-137</option>
+                        </select>
+                    </div>
+                    <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta2">
+                        <div class="tituloRespuesta">YOUR SIZE</div>
+                        <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
+                                id="detalleRespuesta2"> </b></header>
+                    </div>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+                <h3 class="titularesH3New">How to measure</h3>
+                <div class="grid">
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                        <p><b>Step 1: Bust</b><br />Measure the contour of your bust in centimeters by placing a measuring tape over the fullest part.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-band-banio.png?v=1695993814"
+                                alt="Cómo medirte la banda" /></div>
+                    </div>
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                        <p><b>Step 2: Hips</b><br />Measure the contour of your hips by wrapping your measuring tape around the widest part.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-cadera-body.png?v=1689191384"
+                                alt="Cómo medir el contorno del busto" /></div>
+                    </div>
+                </div>
+                <div class="u-textCenter">
+                    <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+                    <p><span>Call our Customer Service </span><strong>Line at <a
+                                href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                            to get expert advice.</span></p>
+                </div>
+            </section>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+    </div>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-banio-pul.js?v=1695994005"></script>
+
+    <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
+
+
+
+
+
+
+
+    
+</div>
