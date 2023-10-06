@@ -1,0 +1,626 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- llamado temporal de estilos -->
+<link rel="stylesheet" href="./css/style-temp.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/theme.css">
+<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0565/6254/8868/t/29/assets/leonisa.css">
+<script type="text/javascript" src="./js/jquery-3.6.3.min.js"></script>
+<!--Fin llamado temporal de estilos -->
+
+
+
+
+
+
+
+<div class="temporalContiene700 rte">
+    <style>
+        .table-wrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.table-wrapper::-webkit-scrollbar-button:increment,.table-wrapper::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.table-wrapper::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+</style>
+
+
+
+
+
+    <!-- COPIAR CONTENIDO DESDE AQUI -->
+    <!-- Estilos quemados de reemplazo -->
+    <style>
+        .custom-label #contTable1 {
+            font-family: AGNextRegular;
+            font-size: 18px !important;
+        }
+        .u-paddingSides5 {
+            padding: 0 5px !important;
+        }
+        .u-paddingSides12 {
+            padding: 0 12px !important;
+        }
+        .temporalContiene700 td,
+        th {
+            background: inherit;
+        }
+    
+        #clearBarraTabla th {
+            background-color: #f6f1e9 !important;
+            color: black;
+        }
+    
+        #contTable1 table td {
+            border-bottom: 0px !important;
+            /* background: none !important; */
+        }
+    
+        #contTable1 table tbody tr:nth-child(odd) {
+            background-color: #f8f5ee !important;
+        }
+    
+        #contTable1 table tbody tr:nth-child(even) {
+            background-color: #ffffff !important;
+        }
+    
+        .titularesH3New {
+            color: #030303;
+            font-size: 19px;
+            font-weight: 600;
+        }
+    
+        .spaceClear {
+            margin: 0 !important;
+        }
+    
+        .checkBoxDiseno {
+            border-radius: 30px;
+            text-align: center;
+            border-color: #f5ece3;
+            background-color: #f8f5ee;
+            padding: 12px 10px;
+        }
+    
+        .checkBoxDiseno:active {
+            border-color: #f4d5b6 !important;
+        }
+    
+        .checkBoxDiseno:focus {
+            border-color: #f4d5b6 !important;
+        }
+    
+        .boderIzqBox {
+            border-right: 2px solid #eeeae0;
+        }
+    
+        /* Toggle style */
+        .contToggleBox {
+            display: flex;
+            align-items: center;
+        }
+    
+        .tableActive {
+            display: block;
+        }
+    
+        .tableOff {
+            display: none;
+        }
+    
+        #contTable1 .label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #394a56;
+            margin: 0 !important;
+            letter-spacing: 0 !important;
+        }
+    
+        .label-text {
+            margin-left: 9px;
+        }
+    
+        .toggle {
+            isolation: isolate;
+            position: relative;
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: solid 2px #f6f0e9;
+        }
+    
+        .toggle-state {
+            display: none;
+        }
+    
+        .indicator {
+            border: 3px solid white;
+            height: 100%;
+            width: 45%;
+            background: #030303;
+            border-radius: 15px;
+            transform: translate3d(121%, 0, 0);
+        }
+    
+        .toggle-state:checked~.indicator {
+            transform: translate3d(5%, 0, 0);
+        }
+    
+        .in {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            font-size: 11px;
+            color: #030303;
+        }
+    
+        .cms {
+            position: absolute;
+            top: 7px;
+            right: 4px;
+            font-size: 11px;
+            color: #030303;
+        }
+    
+        /* Fin Toggle style */
+    
+    
+        @media only screen and (max-width: 600px) {
+            .boderIzqBox {
+                border: none;
+            }
+        }
+    </style>
+    <!-- Fin Estilos quemados de reemplazo -->
+    <!-- Seccion tabla -->
+    <div id="contTable1" class="u-pad u-spaceTop5">
+        <!-- tooggle swicht close -->
+        <div class="contToggleBox u-spaceBottom4">
+            <h3 class="titularesH3New spaceClear u-padRight2">Find your size</h3>
+            <label class="label">
+                <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <span class="in">IN</span>
+                    <div class="indicator"></div>
+                    <span class="cms">CM</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-inches" class="tableActive">
+            <section>
+                <!-- <table id="tablaNew" class="u-textCenter" style="font-size: 15px !important;">
+                    <thead class="u-textWhite">
+                        <tr id="clearBarraTabla">
+                            <th style="width: 20%; vertical-align: middle;">
+                                Leonisa size
+                            </th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                US/UK/ <br>
+                                CA/PR</th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                EU/DE</th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                ES/FR</th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                IT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="padre">
+                        <tr class="uno">
+                            <td>
+                                28</td>
+                            <td>
+                                28</td>
+                            <td>
+                                60</td>
+                            <td>
+                                75</td>
+                            <td>
+                                XS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                30</td>
+                            <td>
+                                65</td>
+                            <td>
+                                80</td>
+                            <td>
+                                S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                32</td>
+                            <td>
+                                32</td>
+                            <td>
+                                70</td>
+                            <td>
+                                85</td>
+                            <td>
+                                1</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                34</td>
+                            <td>
+                                34</td>
+                            <td>
+                                75</td>
+                            <td>
+                                90</td>
+                            <td>
+                                2</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                36</td>
+                            <td>
+                                36</td>
+                            <td>
+                                80</td>
+                            <td>
+                                95</td>
+                            <td>
+                                3</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                38</td>
+                            <td>
+                                38</td>
+                            <td>
+                                85</td>
+                            <td>
+                                100</td>
+                            <td>
+                                4</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                40</td>
+                            <td>
+                                40</td>
+                            <td>
+                                90</td>
+                            <td>
+                                105</td>
+                            <td>
+                                5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                42</td>
+                            <td>
+                                42</td>
+                            <td>
+                                95</td>
+                            <td>
+                                110</td>
+                            <td>
+                                6</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                44</td>
+                            <td>
+                                44</td>
+                            <td>
+                                100</td>
+                            <td>
+                                115</td>
+                            <td>
+                                7</td>
+                        </tr>
+                
+                    </tbody>
+                </table> -->
+                <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
+                <p>
+                    Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
+                    accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.
+                </p>
+                <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in
+                inches</span>
+                    <div class="grid">
+                        <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                            <select
+                                class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                                data-collapsible-target="promo-details-1" id="control1" onchange="habi()">
+                                <option value="">BAND</option>
+                                <option value="0">30"-32"</option>
+                                <option value="1">33"-35"</option>
+                                <option value="2">36"-38"</option>
+                                <option value="3">39"-41"</option>
+                                <option value="4">42"-44"</option>
+                            </select></div>
+                        <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                            <select
+                                class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                                data-collapsible-target="promo-details-1" disabled="disabled" id="control2">
+                                <option value="">BUST</option>
+                                <option value="0">33"-35"</option>
+                                <option value="1">35.5"-37.5"</option>
+                                <option value="2">38"-40.5"</option>
+                                <option value="3">41"-43.5"</option>
+                                <option value="4">44"-46"</option>
+                            </select></div>
+                        <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta">
+                            <div class="tituloRespuesta">YOUR SIZE</div>
+                            <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
+                                    id="detalleRespuesta"> </b></header>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="u-spaceTop5">
+                <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
+                <div class="grid">
+                    <div
+                        class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                        <p><b>Step 1: Band</b><br />Measure your band size by placing your measuring tape right under your
+                            arms and over
+                            the
+                            bust.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-banda-leonisa-paso1_pulg_480x480_up.png?v=1694478444"
+                                alt="Cómo medirte la banda" /></div>
+                    </div>
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                        <p><b>Step 2: Bust</b><br />Measure the contour of your bust in inches by placing a measuring tape
+                            over the
+                            fullest
+                            part.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
+                                alt="Cómo medir el contorno del busto" /></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="u-textCenter">
+                    <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+                    <p><span>Call our Customer Service </span><strong>Line at <a
+                                href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                            to get expert advice.</span></p>
+                </div>
+            </section>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO PULGADAS (TABLAS, IMAGENES Y TEXTO) -->
+
+        <!-- CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+        <div id="contenedor-cms" class="tableOff">
+            <section class="u-spaceBottom5">
+                <!-- <table id="tablaNew2" class="u-textShrink1 u-textCenter" style="font-size: 15px !important;">
+                    <thead class="u-textWhite">
+                        <tr id="clearBarraTabla">
+                            <th style="width: 20%; vertical-align: middle;">
+                                Leonisa size
+                            </th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                US/UK/ <br>
+                                CA/PR</th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                EU/DE</th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                ES/FR</th>
+                            <th style="width: 20%; vertical-align: middle;">
+                                IT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="padre">
+                        <tr class="uno">
+                            <td>
+                                28</td>
+                            <td>
+                                28</td>
+                            <td>
+                                60</td>
+                            <td>
+                                75</td>
+                            <td>
+                                XS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                30</td>
+                            <td>
+                                65</td>
+                            <td>
+                                80</td>
+                            <td>
+                                S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                32</td>
+                            <td>
+                                32</td>
+                            <td>
+                                70</td>
+                            <td>
+                                85</td>
+                            <td>
+                                1</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                34</td>
+                            <td>
+                                34</td>
+                            <td>
+                                75</td>
+                            <td>
+                                90</td>
+                            <td>
+                                2</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                36</td>
+                            <td>
+                                36</td>
+                            <td>
+                                80</td>
+                            <td>
+                                95</td>
+                            <td>
+                                3</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                38</td>
+                            <td>
+                                38</td>
+                            <td>
+                                85</td>
+                            <td>
+                                100</td>
+                            <td>
+                                4</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                40</td>
+                            <td>
+                                40</td>
+                            <td>
+                                90</td>
+                            <td>
+                                105</td>
+                            <td>
+                                5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                42</td>
+                            <td>
+                                42</td>
+                            <td>
+                                95</td>
+                            <td>
+                                110</td>
+                            <td>
+                                6</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                44</td>
+                            <td>
+                                44</td>
+                            <td>
+                                100</td>
+                            <td>
+                                115</td>
+                            <td>
+                                7</td>
+                        </tr>
+                
+                    </tbody>
+                </table> -->
+                <h3 class="titularesH3New u-spaceTop5">Find your size</h3>
+                <p>
+                    Find the perfect size by following these steps. When measuring yourself, wear a comfy bra without padding for an
+                    accurate measurement. Once you have your measurements, use the size calculator to figure out what will fit you.
+                </p>
+            <div><span class="u-spaceBottom3" style="display: block;">Size calculator: Choose the measurements in
+            centimeters</span>
+                <div class="grid">
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                        <select class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                            data-collapsible-target="promo-details-1" id="control3" onchange="habi2()">
+                            <option value="">BAND</option>
+                            <option value="0">68-74</option>
+                            <option value="1">75-81</option>
+                            <option value="2">82-88</option>
+                            <option value="3">89-95</option>
+                            <option value="4">96-102</option>
+                        </select>
+                    </div>
+                    <div class="grid__item medium-up--one-half aos-init aos-animate u-paddingSides5" data-aos="row-of-2">
+                        <select class="Input u-fullWidth u-spaceEnds checkBoxDiseno" data-collapsible-action="hide"
+                            data-collapsible-target="promo-details-1" disabled="disabled" id="control4">
+                            <option value="">BUST</option>
+                            <option value="0">83-89</option>
+                            <option value="1">90-96</option>
+                            <option value="2">97-103</option>
+                            <option value="3">104-110</option>
+                            <option value="4">111-117</option>
+                        </select>
+                    </div>
+                    <div class="respuestaAfirmativa grid__item u-textCenter u-pad1" id="SiRespuesta2">
+                        <div class="tituloRespuesta">YOUR SIZE</div>
+                        <header class="section-header u-space0"><b class="section-header__title u-space0 u-textGrow5"
+                                id="detalleRespuesta2"> </b></header>
+                    </div>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+                <h3 class="titularesH3New u-spaceTop5">How to measure</h3>
+                <div class="grid">
+                    <div
+                        class="grid__item small--one-whole medium-up--two-quarters u-spaceBottom2 u-md-space0 boderIzqBox u-paddingSides12">
+                        <p><b>Step 1: Under Band</b><br />Measure your under band size, by placing the measuring tape just below the
+                            bust around your torso.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/bra-size-banda-leonisa-paso1_pulg_480x480_up.png?v=1694478444"
+                                alt="Cómo medirte la banda" /></div>
+                    </div>
+                    <div class="grid__item small--one-whole medium-up--two-quarters u-paddingSides12">
+                        <p><b>Step 2: Bust</b><br />Measure the contour of your bust in centimeters by placing a measuring tape
+                            over the fullest part.</p>
+                        <div class="u-textCenter"><img
+                                src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/como-medir-busto_cb6fac2a-c87a-450f-ba54-78cbd255f624.png?v=1689785804"
+                                alt="Cómo medir el contorno del busto" /></div>
+                    </div>
+                </div>
+                <div class="u-textCenter">
+                    <h3 class="titularesH3New u-spaceTop5">Questions?</h3>
+                    <p><span>Call our Customer Service </span><strong>Line at <a
+                                href="tel:1-800-657-9107">1-800-657-9107</a></strong><span>
+                            to get expert advice.</span></p>
+                </div>
+            </section>
+        </div>
+        <!-- FIN CONTENEDOR DE SOLO CMS (TABLAS, IMAGENES Y TEXTO) -->
+    </div>
+    <script src="https://cdn.shopify.com/s/files/1/0565/6254/8868/files/js-tablas-011967-pul.js?v=1696514262"></script>
+
+    <!-- FIN COPIAR CONTENIDO DESDE AQUI -->
+
+
+
+
+
+
+
+    
+</div>
